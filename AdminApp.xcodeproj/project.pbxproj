@@ -16,6 +16,7 @@
 		C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E381122A375EA0069DFAF /* AdminDelegate.swift */; };
 		C35E381422A3786E0069DFAF /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E381322A3786E0069DFAF /* UserDao.swift */; };
 		C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F131722BBD419009773FB /* UsersListDelegate.swift */; };
+		C36F131A22BD2CB3009773FB /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = C36F131922BD2CB3009773FB /* AppIcon.appiconset */; };
 		C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80C522A1269900BAFE40 /* AppDelegate.swift */; };
 		C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80C722A1269900BAFE40 /* ViewController.swift */; };
 		C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37F80C922A1269900BAFE40 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		C35E381122A375EA0069DFAF /* AdminDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminDelegate.swift; sourceTree = "<group>"; };
 		C35E381322A3786E0069DFAF /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		C36F131722BBD419009773FB /* UsersListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListDelegate.swift; sourceTree = "<group>"; };
+		C36F131922BD2CB3009773FB /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = "../../../../../Volumes/VMware Shared Folders/shared folder/ios/AppIcon.appiconset"; sourceTree = "<group>"; };
 		C37F80C222A1269900BAFE40 /* AdminApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdminApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37F80C522A1269900BAFE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37F80C722A1269900BAFE40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				C37F80F722A15B4500BAFE40 /* Model */,
 				C37F80C522A1269900BAFE40 /* AppDelegate.swift */,
 				C37F80CC22A1269900BAFE40 /* Assets.xcassets */,
+				C36F131922BD2CB3009773FB /* AppIcon.appiconset */,
 				C37F80CE22A1269900BAFE40 /* LaunchScreen.storyboard */,
 				C37F80D122A1269900BAFE40 /* Info.plist */,
 			);
@@ -363,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36F131A22BD2CB3009773FB /* AppIcon.appiconset in Resources */,
 				C37F80D022A1269900BAFE40 /* LaunchScreen.storyboard in Resources */,
 				C37F80CD22A1269900BAFE40 /* Assets.xcassets in Resources */,
 				C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */,
@@ -640,6 +644,7 @@
 			baseConfigurationReference = DF2BE9FD127DBBD72DD9EC9C /* Pods-AdminApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AdminApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iti.AdminApp;
@@ -653,6 +658,7 @@
 			baseConfigurationReference = 0DB7C5FBD2DF4AFEC351622C /* Pods-AdminApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AdminApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iti.AdminApp;
