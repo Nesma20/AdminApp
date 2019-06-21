@@ -30,6 +30,9 @@ class ViewController: UIViewController ,AdminDelegate{
         passwordValid = false
         loginBtn.isEnabled = false
         
+        loginBtn.layer.cornerRadius = loginBtn.frame.height / 2
+        loginBtn.layer.masksToBounds = true
+
         
     }
     
@@ -42,7 +45,11 @@ class ViewController: UIViewController ,AdminDelegate{
             
         }
         else {
+            
         emailValid = true
+            
+            validationLabel.text = ""
+
         }
         enableLoginBtn()
         
@@ -59,6 +66,8 @@ class ViewController: UIViewController ,AdminDelegate{
         }
         else {
             passwordValid = true
+            validationLabel.text = ""
+
         }
         enableLoginBtn()
         
@@ -87,18 +96,17 @@ class ViewController: UIViewController ,AdminDelegate{
         guard let userEmail = emailTextFiled.text , !userEmail.isEmpty else {
             SVProgressHUD.dismiss()
 
-           // self.signInView.valdiatelabel.text = "Email is required!"
+           validationLabel.text = "Email is required!"
             return
         }
         
         guard let userPassword = passwordTextField.text ,!userPassword.isEmpty else {
             SVProgressHUD.dismiss()
-         //   self.signInView.valdiatelabel.text = "Password is required!"
+         validationLabel.text = "Password is required!"
             return
         }
 
-        adminDao.logIn(email : emailTextFiled.text! , password : passwordTextField.text! ,completionHandler :{(userFound) in
-             SVProgressHUD.dismiss()
+        adminDao.logIn(email : userEmail , password : userPassword ,completionHandler :{(userFound) in
             
             if userFound {
             

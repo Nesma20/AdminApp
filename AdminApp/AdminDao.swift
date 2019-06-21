@@ -39,17 +39,18 @@ class AdminDao {
                 
                   userFound = true
                         self.myAdmin = self.parseAdminData(data: myJsonData["admin"]);
-                    print(self.myAdmin.userName ?? "no data");
+
+                    self.saveInUserDefault()
                     
                     
                 }
                 completionHandler(userFound)
                 
                 
-            case .failure(let data):
+            case .failure(let error):
                 userFound = false
                 print("there is error in connection")
-                //print(data)
+                print(error)
                 completionHandler(userFound)
                 
             }
@@ -68,6 +69,34 @@ class AdminDao {
         myAdminData.password = data["adminPassword"].string
         return myAdminData
     }
+    
+    
+    func saveInUserDefault (){
+    UserDefaults.standard.setValue(myAdmin.userName, forKey: adminProperties.adminName.rawValue)
+    UserDefaults.standard.setValue(myAdmin.email, forKey: adminProperties.adminEmail.rawValue)
+    UserDefaults.standard.setValue(myAdmin.password, forKey: adminProperties.adminPassword.rawValue)
+        
+    }
+    func clearDataFromUserDefault () {
+        UserDefaults.standard.removeObject(forKey: adminProperties.adminName.rawValue)
+        UserDefaults.standard.removeObject(forKey: adminProperties.adminEmail.rawValue)
+        UserDefaults.standard.removeObject(forKey: adminProperties.adminPassword.rawValue)
 
+    
+    }
+    
+    
+    func checkdataInUserDefault()->Bool{
+    
+    return UserDefaults.standard.object(forKey: adminProperties.adminEmail.rawValue) != nil
+    }
+    
+    
+    
+
+
+}
+enum adminProperties : String {
+case adminName,adminEmail,adminPassword
 
 }

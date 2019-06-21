@@ -8,30 +8,48 @@
 
 import UIKit
 import  SDWebImage
-
+import SVProgressHUD
 class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDelegate {
     var adminDelegate:AdminDelegate!
     var users : Array<User> = []
     var userDao = UserDao()
+    var adminDao = AdminDao()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUsersList()
+        
+       
        
         print("users size \(users.count)")
+        
+        
+         self.navigationItem.hidesBackButton = true
         
         let  signOutBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(signOut(sender:)))
         
         self.navigationItem.rightBarButtonItem = signOutBtn
         
-adminDelegate.deleteTextFromLogIn()
+//adminDelegate.deleteTextFromLogIn()
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+         updateUsersList()
+       
+    }
+    
     func  signOut(sender: UIBarButtonItem) {
     
         // delete from User Default
+        adminDao.clearDataFromUserDefault()
         
+        // redirct to login page
+        let window = UIApplication.shared.keyWindow
+        let storyboard
+            = UIStoryboard(name: "Main", bundle: nil)
+        let LoginVC = storyboard.instantiateViewController(withIdentifier: "loginVCNavigation")
+        window?.rootViewController  = LoginVC
+        UIView.transition(with: window!, duration: 0.5, options: .curveEaseInOut, animations: nil, completion: nil)
         
         
     }
@@ -71,13 +89,18 @@ adminDelegate.deleteTextFromLogIn()
         
         userDao.getAllUsersToBeVerified(completionHandler: {
             (usersList) in
+            if usersList.count == 0 {
+                SVProgressHUD.showInfo(withStatus: "There are no users to be verified")
+            }
+            
+            
             self.users = usersList
         self.tableView.reloadData()
             
         })
     }
    
-    
+   
     
 
 
