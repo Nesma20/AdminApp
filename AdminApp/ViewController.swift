@@ -12,7 +12,7 @@ import SVProgressHUD
 class ViewController: UIViewController ,AdminDelegate{
     
     @IBOutlet weak var emailTextFiled: UITextField!
-
+    
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var loginBtn: UIButton!
@@ -32,24 +32,21 @@ class ViewController: UIViewController ,AdminDelegate{
         
         loginBtn.layer.cornerRadius = loginBtn.frame.height / 2
         loginBtn.layer.masksToBounds = true
-
         
     }
     
     @IBAction func emailEditingChangeAction(_ sender: UITextField) {
-       
-        if(sender.text?.isEmpty)!
-        {
-        emailValid = false
+        
+        if(sender.text?.isEmpty)! {
+            emailValid = false
             validationLabel.text = "Enter Your Email"
             
-        }
-        else {
+        } else {
             
-        emailValid = true
+            emailValid = true
             
             validationLabel.text = ""
-
+            
         }
         enableLoginBtn()
         
@@ -58,85 +55,79 @@ class ViewController: UIViewController ,AdminDelegate{
     
     @IBAction func passwordEditingChangeAction(_ sender: UITextField) {
         
-        if(sender.text?.isEmpty)!
-        {
+        if(sender.text?.isEmpty)! {
             passwordValid = false
             validationLabel.text = "Enter Your Password"
             
-        }
-        else {
+        } else {
             passwordValid = true
             validationLabel.text = ""
-
+            
         }
+        
         enableLoginBtn()
         
     }
-
-    func enableLoginBtn (){
     
+    func enableLoginBtn (){
+        
         if emailValid! && passwordValid! {
-        loginBtn.isEnabled = true
-        
-        }
-        else {
+            loginBtn.isEnabled = true
             
-        loginBtn.isEnabled = false
+        } else {
+            
+            loginBtn.isEnabled = false
             
         }
-        
-        
     }
     
-
+    
     @IBAction func loginBtnAction(_ sender: Any) {
         
         loginBtn.isEnabled = false
-         SVProgressHUD.show()
         
         guard let userEmail = emailTextFiled.text , !userEmail.isEmpty else {
             SVProgressHUD.dismiss()
-
-           validationLabel.text = "Email is required!"
+            
+            validationLabel.text = "Email is required!"
             return
         }
         
         guard let userPassword = passwordTextField.text ,!userPassword.isEmpty else {
             SVProgressHUD.dismiss()
-         validationLabel.text = "Password is required!"
+            validationLabel.text = "Password is required!"
             return
         }
-
+        
+        SVProgressHUD.show()
+        
         adminDao.logIn(email : userEmail , password : userPassword ,completionHandler :{(userFound) in
             
+            SVProgressHUD.dismiss()
+            
             if userFound {
-            
-            
-            print("logged in successfully")
-            
-            let displayingUsers = self.storyboard?.instantiateViewController(withIdentifier: "displayUserVC") as! DisplayUsersForVerifiedViewController
+                
+                let displayingUsers = self.storyboard?.instantiateViewController(withIdentifier: "displayUserVC") as! DisplayUsersForVerifiedViewController
                 displayingUsers.adminDelegate = self
-            
-            self.navigationController?.pushViewController(displayingUsers, animated: true)
                 
-            
-            }
-        else{
-          
-            
-            SVProgressHUD.showError(withStatus: "email OR password isn't correct!")
+                self.navigationController?.pushViewController(displayingUsers, animated: true)
                 
-                  print ("Fail while logging in")
+                
+            } else {
+                
+                SVProgressHUD.showError(withStatus: "email OR password isn't correct!")
+                
             }
-        
         })
-       loginBtn.isEnabled = true
+        
+        loginBtn.isEnabled = true
     }
-    func deleteTextFromLogIn(){
-    emailTextFiled.text! = ""
-        passwordTextField.text! = ""
     
+    func deleteTextFromLogIn(){
+        emailTextFiled.text! = ""
+        passwordTextField.text! = ""
+        
     }
-
+    
 }
 
