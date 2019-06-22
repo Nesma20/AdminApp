@@ -91,6 +91,7 @@ class ViewController: UIViewController ,AdminDelegate{
 
     @IBAction func loginBtnAction(_ sender: Any) {
         
+        loginBtn.isEnabled = false
          SVProgressHUD.show()
         
         guard let userEmail = emailTextFiled.text , !userEmail.isEmpty else {
@@ -129,7 +130,7 @@ class ViewController: UIViewController ,AdminDelegate{
             }
         
         })
-    
+       loginBtn.isEnabled = true
     }
     func deleteTextFromLogIn(){
     emailTextFiled.text! = ""

@@ -26,8 +26,10 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
          self.navigationItem.hidesBackButton = true
         
         let  signOutBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(signOut(sender:)))
+        let refreshBtn = UIBarButtonItem(title: "Refresh", style: UIBarButtonItemStyle.plain, target: self, action: #selector(refresh(sender:)))
         
         self.navigationItem.rightBarButtonItem = signOutBtn
+        self.navigationItem.leftBarButtonItem = refreshBtn
         
 //adminDelegate.deleteTextFromLogIn()
         
@@ -52,6 +54,11 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
         UIView.transition(with: window!, duration: 0.5, options: .curveEaseInOut, animations: nil, completion: nil)
         
         
+    }
+    func refresh(sender:UIBarButtonItem){
+    
+        updateUsersList()
+    
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
