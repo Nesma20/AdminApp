@@ -68,7 +68,7 @@
 		83CF238122BFAB2900D568E5 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		83CF238322BFD9D900D568E5 /* DemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 		83CF238522BFDF7000D568E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		83CF238722C000D000D568E5 /* TrySomething.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TrySomething.storyboard; path = ../../../.Trash/TrySomething.storyboard; sourceTree = "<group>"; };
+		83CF238722C000D000D568E5 /* TrySomething.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrySomething.storyboard; sourceTree = "<group>"; };
 		C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestuarantViewController.swift; sourceTree = "<group>"; };
 		C3193F9422BEF73C00168F58 /* Restuarant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantAdmin.swift; sourceTree = "<group>"; };
