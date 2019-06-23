@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8345955E22BEC9D900253F8D /* TrySomething.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8345955D22BEC9D900253F8D /* TrySomething.storyboard */; };
 		B8C3BBFAA001269097EBDCEB /* Pods_AdminApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224283784F4CBD3CF4E4C6E3 /* Pods_AdminApp.framework */; };
+		C3193F9322BEE13700168F58 /* AddRestuarantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */; };
+		C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9422BEF73C00168F58 /* Restuarant.swift */; };
+		C3193F9722BEF78400168F58 /* RestuarantAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */; };
+		C3193F9922BF016000168F58 /* RestuarantDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9822BF016000168F58 /* RestuarantDao.swift */; };
+		C3193F9B22BF84DA00168F58 /* AddRestuarantAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */; };
 		C336AC5C22BA947B00478403 /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC5B22BA947B00478403 /* ImageAPI.swift */; };
 		C336AC5E22BAA6BF00478403 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */; };
 		C336AC6222BADA1C00478403 /* imgeIDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */; };
@@ -58,6 +63,11 @@
 		336CDEE07D3415642E8B603D /* Pods-AdminAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppUITests/Pods-AdminAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdminAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8345955D22BEC9D900253F8D /* TrySomething.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrySomething.storyboard; sourceTree = "<group>"; };
+		C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestuarantViewController.swift; sourceTree = "<group>"; };
+		C3193F9422BEF73C00168F58 /* Restuarant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
+		C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantAdmin.swift; sourceTree = "<group>"; };
+		C3193F9822BF016000168F58 /* RestuarantDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantDao.swift; sourceTree = "<group>"; };
+		C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestuarantAdminViewController.swift; sourceTree = "<group>"; };
 		C336AC5B22BA947B00478403 /* ImageAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
 		C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imgeIDCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -227,9 +237,11 @@
 		C37F80F922A15B5E00BAFE40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */,
 				C37F80C722A1269900BAFE40 /* ViewController.swift */,
 				C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */,
 				C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */,
+				C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -239,6 +251,8 @@
 			children = (
 				C37F80FF22A169BE00BAFE40 /* User.swift */,
 				C37F80FA22A15BA700BAFE40 /* Admin.swift */,
+				C3193F9422BEF73C00168F58 /* Restuarant.swift */,
+				C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */,
 			);
 			name = "Data Layer";
 			sourceTree = "<group>";
@@ -251,6 +265,7 @@
 				C35E381322A3786E0069DFAF /* UserDao.swift */,
 				C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */,
 				C336AC5B22BA947B00478403 /* ImageAPI.swift */,
+				C3193F9822BF016000168F58 /* RestuarantDao.swift */,
 			);
 			name = "Network Layer";
 			sourceTree = "<group>";
@@ -479,19 +494,24 @@
 			files = (
 				C336AC5E22BAA6BF00478403 /* VerificationViewController.swift in Sources */,
 				C35E381422A3786E0069DFAF /* UserDao.swift in Sources */,
+				C3193F9722BEF78400168F58 /* RestuarantAdmin.swift in Sources */,
+				C3193F9B22BF84DA00168F58 /* AddRestuarantAdminViewController.swift in Sources */,
 				C35E380E22A36E7A0069DFAF /* AdminDao.swift in Sources */,
 				C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */,
 				C37F810222A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift in Sources */,
 				C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */,
 				C37F810022A169BE00BAFE40 /* User.swift in Sources */,
+				C3193F9322BEE13700168F58 /* AddRestuarantViewController.swift in Sources */,
 				C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */,
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
 				C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */,
+				C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */,
 				C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */,
 				C336AC6222BADA1C00478403 /* imgeIDCollectionViewCell.swift in Sources */,
 				C336AC5C22BA947B00478403 /* ImageAPI.swift in Sources */,
 				C35E381022A36FB50069DFAF /* AdminAPI.swift in Sources */,
+				C3193F9922BF016000168F58 /* RestuarantDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

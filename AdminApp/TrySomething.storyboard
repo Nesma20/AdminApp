@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="VIy-zP-Zph"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pM3-tl-EX3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Li6-ty-yWX">
-                                <rect key="frame" x="16" y="20" width="343" height="980"/>
+                                <rect key="frame" x="20" y="20" width="360" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sab-P1-LDy">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="1000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9u-K5-fBX">
                                                 <rect key="frame" x="150" y="25" width="42" height="21"/>
@@ -67,7 +67,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="400" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApS-ut-wGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,4 +25,39 @@ class ImageAPI {
         return imageUrl + type.rawValue + publicId
     }
     
+    static func uploadImage(imgData: Data, completionHandler: @escaping (Int?, String?) -> Void) {
+        
+        let url = "https://et3am.herokuapp.com/image/fileupload"
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "file", fileName: "file.jpg", mimeType: "image/jpg")
+        }, to: url) { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    guard let result = response.result.value else {
+                        return
+                    }
+                    
+                    let json = JSON(result)
+                    let code = json["code"].int
+                    let imageId = json["image"]["public_id"].string
+                    completionHandler(code, imageId)
+                    
+                }
+                
+            case .failure(let encodingError):
+                print(encodingError)
+                completionHandler(0, nil)
+            }
+        }
+        
+    }
+
+    
     }

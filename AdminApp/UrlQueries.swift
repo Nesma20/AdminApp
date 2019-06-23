@@ -20,3 +20,9 @@ case user_id = "user_id"
 case verified="verified_id"
     
 }
+enum RestaurantQueriesURL : String {
+case restuarant="add_resturant"
+case resturantAdmin = "add_restuarant/admin"
+
+}
+
