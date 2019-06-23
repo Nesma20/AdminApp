@@ -24,8 +24,12 @@
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>We need your permission to access your photo</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>the app needs a location permession</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Used to access the Image Gallery</string>
+	<key>Privacy -Location when in Use Usage Description.</key>
+	<string>This App Needs To Allow Location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

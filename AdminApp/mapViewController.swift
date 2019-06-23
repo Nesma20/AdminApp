@@ -10,6 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 class mapViewController:UIViewController{
+    var mapViewSelectionDelegate: MapViewSelectionDelegate!
+    var lat:Double?
+    
+    var longt:Double?
+    
+    @IBAction func SelectLocationIsDone(_ sender: Any) {
+        
+        mapViewSelectionDelegate.setCoordinates(latInDelegate:lat!, longtInDelegate: longt!,isChecked: false)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
     
     let locationManager = CLLocationManager()
     
@@ -26,11 +39,11 @@ class mapViewController:UIViewController{
         let latitude: CLLocationDegrees = 30.596335
         let longitude: CLLocationDegrees = 32.271353
         
-        let regionDistance:CLLocationDistance = 100
+        let regionDistance:CLLocationDistance = 10000
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         myMapView.setRegion(regionSpan, animated:true)
-    
+        
         
         
         myMapView.isZoomEnabled = true
@@ -46,25 +59,17 @@ class mapViewController:UIViewController{
         
         annotation.coordinate = coordinate
         myMapView.addAnnotation(annotation)
+        lat =  coordinate.latitude
+        longt = coordinate.longitude
+        
         print(coordinate.latitude ?? 125)
     }
     
-    func openMapForPlace() {
-        
-        let latitude: CLLocationDegrees = 30.596335
-        let longitude: CLLocationDegrees = 32.271353
-        
-        let regionDistance:CLLocationDistance = 10000
-        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Place Name"
-        mapItem.openInMaps(launchOptions: options)
-    }
+   }
+
+protocol MapViewSelectionDelegate {
+    
+    func setCoordinates(latInDelegate:Double , longtInDelegate:Double , isChecked:Bool)
+    
 }
 
