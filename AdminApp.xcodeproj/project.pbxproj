@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8345955E22BEC9D900253F8D /* TrySomething.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8345955D22BEC9D900253F8D /* TrySomething.storyboard */; };
+		83CF238222BFAB2900D568E5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF238122BFAB2900D568E5 /* mapViewController.swift */; };
 		B8C3BBFAA001269097EBDCEB /* Pods_AdminApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224283784F4CBD3CF4E4C6E3 /* Pods_AdminApp.framework */; };
 		C3193F9322BEE13700168F58 /* AddRestuarantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */; };
 		C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9422BEF73C00168F58 /* Restuarant.swift */; };
@@ -63,6 +64,7 @@
 		336CDEE07D3415642E8B603D /* Pods-AdminAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppUITests/Pods-AdminAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdminAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8345955D22BEC9D900253F8D /* TrySomething.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrySomething.storyboard; sourceTree = "<group>"; };
+		83CF238122BFAB2900D568E5 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestuarantViewController.swift; sourceTree = "<group>"; };
 		C3193F9422BEF73C00168F58 /* Restuarant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantAdmin.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */,
 				C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */,
 				C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */,
+				83CF238122BFAB2900D568E5 /* mapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */,
 				C336AC6222BADA1C00478403 /* imgeIDCollectionViewCell.swift in Sources */,
 				C336AC5C22BA947B00478403 /* ImageAPI.swift in Sources */,
+				83CF238222BFAB2900D568E5 /* mapViewController.swift in Sources */,
 				C35E381022A36FB50069DFAF /* AdminAPI.swift in Sources */,
 				C3193F9922BF016000168F58 /* RestuarantDao.swift in Sources */,
 			);
