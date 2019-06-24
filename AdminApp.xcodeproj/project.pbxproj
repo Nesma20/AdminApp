@@ -36,6 +36,7 @@
 		C37F810022A169BE00BAFE40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80FF22A169BE00BAFE40 /* User.swift */; };
 		C37F810222A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */; };
 		C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */; };
+		C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */; };
 		C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */; };
 		EC6E84A1489A6BA53780DB7C /* Pods_AdminAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C34A9E58C6C9D8352DD62DD /* Pods_AdminAppUITests.framework */; };
 		F28BE11BDF48C17FD4DACDDA /* Pods_AdminAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */; };
@@ -99,6 +100,7 @@
 		C37F80FF22A169BE00BAFE40 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUsersForVerifiedViewController.swift; sourceTree = "<group>"; };
 		C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUsersTableViewCell.swift; sourceTree = "<group>"; };
+		C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlQueries.swift; sourceTree = "<group>"; };
 		C4F699638A43BC7DBDD6B286 /* Pods-AdminAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppTests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppTests/Pods-AdminAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2BE9FD127DBBD72DD9EC9C /* Pods-AdminApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp/Pods-AdminApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */,
 				C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */,
 				83CF238722C000D000D568E5 /* TrySomething.storyboard */,
+				C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */,
 				83CF238422BFD9D900D568E5 /* DemoVC.swift in Sources */,
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
+				C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
 				C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */,
 				C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */,

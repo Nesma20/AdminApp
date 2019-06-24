@@ -190,12 +190,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="agj-47-abv">
                         <rightBarButtonItems>
-                            <barButtonItem title="SignOut" id="u6S-OE-IxN">
+                            <barButtonItem title="Logout" style="done" id="u6S-OE-IxN">
+                                <color key="tintColor" red="0.90588235859999999" green="0.29803922770000002" blue="0.23529411850000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="signOutAction:" destination="rMh-IP-eJk" id="jlZ-bZ-99P"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Add Restaurant" id="TkP-Yb-FDc">
+                            <barButtonItem systemItem="add" id="TkP-Yb-FDc">
+                                <color key="tintColor" red="0.015686274510000001" green="0.1019607843" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addRestaurantAction:" destination="rMh-IP-eJk" id="3ya-au-48S"/>
                                 </connections>
@@ -351,9 +353,10 @@
             <objects>
                 <navigationController storyboardIdentifier="displayUserNavigation" automaticallyAdjustsScrollViewInsets="NO" id="AcY-Ra-Ty2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w8k-of-NxO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="w8k-of-NxO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.015686274510000001" green="0.1019607843" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

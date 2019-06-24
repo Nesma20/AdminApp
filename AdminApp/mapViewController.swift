@@ -17,7 +17,7 @@ class mapViewController:UIViewController{
     
     @IBAction func SelectLocationIsDone(_ sender: Any) {
         
-        mapViewSelectionDelegate.setCoordinates(latInDelegate:lat!, longtInDelegate: longt!,isChecked: false)
+        mapViewSelectionDelegate.setCoordinates(latInDelegate:lat ?? 0, longtInDelegate: longt ?? 0,isChecked: false)
         dismiss(animated: true, completion: nil)
         
     }
