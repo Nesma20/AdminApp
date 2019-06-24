@@ -22,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-uP-c0E">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OD-ig-sti">
                                 <rect key="frame" x="16" y="617" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.90588235859999999" green="0.29803922770000002" blue="0.23529411850000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,15 +35,18 @@
                                     <action selector="SelectLocationIsDone:" destination="bvh-Q7-iRg" eventType="touchUpInside" id="oKx-x3-82k"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-uP-c0E">
+                                <rect key="frame" x="16" y="20" width="343" height="597"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5VN-uP-c0E" secondAttribute="trailing" id="8uE-GK-nqm"/>
                             <constraint firstItem="5VN-uP-c0E" firstAttribute="leading" secondItem="ewY-AR-PfW" secondAttribute="leadingMargin" id="JH0-xC-SdD"/>
-                            <constraint firstItem="5VN-uP-c0E" firstAttribute="top" secondItem="VUX-AG-0nA" secondAttribute="bottom" id="bni-XM-9BH"/>
+                            <constraint firstItem="5VN-uP-c0E" firstAttribute="top" secondItem="VUX-AG-0nA" secondAttribute="bottom" id="TXh-pX-gm5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0OD-ig-sti" secondAttribute="trailing" id="dCd-h1-DC4"/>
                             <constraint firstItem="pio-pH-H5e" firstAttribute="top" secondItem="0OD-ig-sti" secondAttribute="bottom" id="f8l-lS-kCy"/>
-                            <constraint firstItem="pio-pH-H5e" firstAttribute="top" secondItem="5VN-uP-c0E" secondAttribute="bottom" id="mTF-lg-8bi"/>
+                            <constraint firstItem="pio-pH-H5e" firstAttribute="top" secondItem="5VN-uP-c0E" secondAttribute="bottom" constant="50" id="mTF-lg-8bi"/>
                             <constraint firstItem="0OD-ig-sti" firstAttribute="leading" secondItem="ewY-AR-PfW" secondAttribute="leadingMargin" id="o6E-Ty-LHm"/>
                         </constraints>
                     </view>
@@ -56,12 +56,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJf-Ke-40B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="96"/>
+            <point key="canvasLocation" x="1190" y="-81"/>
         </scene>
         <!--Add Restuarant View Controller-->
         <scene sceneID="gUS-2G-VUr">
             <objects>
-                <viewController id="mRY-ev-RQC" customClass="AddRestuarantViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="restaurantVC" id="mRY-ev-RQC" customClass="AddRestuarantViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="95L-Gt-Yd8"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ck-kl-xic"/>
@@ -77,13 +77,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="1000"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3wV-yJ-H3b">
-                                                <rect key="frame" x="47" y="50" width="280" height="749"/>
+                                                <rect key="frame" x="47" y="30" width="280" height="749"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-3t-ZoJ">
-                                                        <rect key="frame" x="20" y="0.0" width="240" height="128"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rest_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-3t-ZoJ">
+                                                        <rect key="frame" x="65" y="0.0" width="150" height="128"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="RDO-lL-5d8"/>
-                                                            <constraint firstAttribute="width" constant="240" id="tFB-Cr-ss9"/>
+                                                            <constraint firstAttribute="width" constant="150" id="tFB-Cr-ss9"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyW-Lh-4Jy">
@@ -193,14 +193,14 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-Ds-TdL">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-Ds-TdL">
                                                         <rect key="frame" x="0.0" y="379" width="280" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx4-3H-Bkw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="9Li-IV-U6Q"/>
-                                                                    <constraint firstAttribute="width" constant="80" id="awX-ap-xkP"/>
+                                                                    <constraint firstAttribute="width" constant="70" id="awX-ap-xkP"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,7 +222,6 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="Cx4-3H-Bkw" firstAttribute="leading" secondItem="Fce-Ds-TdL" secondAttribute="leading" id="IH0-lr-tDr"/>
-                                                            <constraint firstItem="daZ-mS-f8L" firstAttribute="leading" secondItem="Cx4-3H-Bkw" secondAttribute="trailing" id="JMZ-gu-LDa"/>
                                                             <constraint firstAttribute="width" constant="280" id="ip3-Lb-rPP"/>
                                                             <constraint firstAttribute="height" constant="30" id="k1F-Zv-SMq"/>
                                                         </constraints>
@@ -291,7 +290,7 @@
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyC-K3-GCf">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyC-K3-GCf">
                                                                 <rect key="frame" x="80" y="0.0" width="200" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="T80-Es-jao"/>
@@ -359,6 +358,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="1Nl-H5-0Hy"/>
                                                     <constraint firstAttribute="trailing" secondItem="unT-8v-hct" secondAttribute="trailing" id="6Eo-fZ-peQ"/>
+                                                    <constraint firstItem="ed3-3t-ZoJ" firstAttribute="top" secondItem="3wV-yJ-H3b" secondAttribute="top" id="Zsq-Ib-6xL"/>
                                                     <constraint firstItem="unT-8v-hct" firstAttribute="leading" secondItem="3wV-yJ-H3b" secondAttribute="leading" id="qK7-iV-xd0"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="610" id="wcQ-GG-LXa"/>
                                                 </constraints>
@@ -371,9 +371,9 @@
                                                 </constraints>
                                             </activityIndicatorView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="3wV-yJ-H3b" firstAttribute="top" secondItem="r18-Il-Y0v" secondAttribute="top" constant="50" id="PCj-yH-WZ8"/>
+                                            <constraint firstItem="3wV-yJ-H3b" firstAttribute="top" secondItem="r18-Il-Y0v" secondAttribute="top" constant="30" id="PCj-yH-WZ8"/>
                                             <constraint firstAttribute="height" constant="1000" id="Z7V-lK-yHP"/>
                                             <constraint firstItem="3wV-yJ-H3b" firstAttribute="centerX" secondItem="r18-Il-Y0v" secondAttribute="centerX" id="aaL-7d-CYR"/>
                                             <constraint firstItem="k1p-Ro-ZNo" firstAttribute="top" secondItem="r18-Il-Y0v" secondAttribute="top" constant="95" id="cFc-d2-03Y"/>
@@ -390,7 +390,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Vg-Fw-STo" firstAttribute="leading" secondItem="qGE-OT-8x0" secondAttribute="leadingMargin" id="Fca-vQ-AFN"/>
                             <constraint firstItem="8Vg-Fw-STo" firstAttribute="top" secondItem="95L-Gt-Yd8" secondAttribute="bottom" id="JBC-s2-LuN"/>
@@ -401,6 +401,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="addPhotoBtn" destination="IyW-Lh-4Jy" id="1L1-eS-eFH"/>
                         <outlet property="addRestuarantBtn" destination="CsT-bx-rqb" id="43t-BE-cWm"/>
                         <outlet property="cityErrorLabel" destination="wJA-T3-Q5f" id="aHp-ZK-1ph"/>
                         <outlet property="cityTextField" destination="PAc-Wf-wgR" id="ZKl-UW-4bm"/>
@@ -408,10 +409,8 @@
                         <outlet property="countryTxtField" destination="daZ-mS-f8L" id="3di-gI-t0I"/>
                         <outlet property="imageActivityIndicator" destination="k1p-Ro-ZNo" id="0oZ-6L-ZV3"/>
                         <outlet property="latitudeErrorLabel" destination="2g6-1F-iiV" id="fuB-UG-WPH"/>
-                        <outlet property="latitudeText" destination="FyC-K3-GCf" id="hSF-Ls-bP5"/>
                         <outlet property="latitudeTxtField" destination="FyC-K3-GCf" id="tEi-gx-l4t"/>
                         <outlet property="longitudeErrorLabel" destination="MbA-y8-bKE" id="dTv-kW-w94"/>
-                        <outlet property="longitudeText" destination="czX-dF-4sd" id="rJx-tG-zOz"/>
                         <outlet property="longitudeTxtField" destination="czX-dF-4sd" id="M5b-z3-kN8"/>
                         <outlet property="nameErrorLabel" destination="0Ip-Ps-tmr" id="BqB-g4-dyw"/>
                         <outlet property="resturantImage" destination="ed3-3t-ZoJ" id="icy-T9-EC0"/>
@@ -425,7 +424,7 @@
         <!--Add Restuarant Admin View Controller-->
         <scene sceneID="h7o-6p-3gU">
             <objects>
-                <viewController id="gBy-z6-4gL" customClass="AddRestuarantAdminViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="restaurantAdminVC" id="gBy-z6-4gL" customClass="AddRestuarantAdminViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6O6-Nw-yUr"/>
                         <viewControllerLayoutGuide type="bottom" id="mTs-f5-Zhq"/>
@@ -492,7 +491,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -533,7 +532,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="W3V-Ai-vlI" firstAttribute="top" secondItem="6O6-Nw-yUr" secondAttribute="bottom" constant="70" id="Rxh-Ss-Dg5"/>
                             <constraint firstItem="W3V-Ai-vlI" firstAttribute="centerX" secondItem="qXL-8c-YpD" secondAttribute="centerX" id="kmg-No-dxm"/>
@@ -549,7 +548,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYh-g0-sI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="163"/>
+            <point key="canvasLocation" x="1190" y="710"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rest_icon" width="920" height="991"/>
+    </resources>
 </document>

@@ -26,8 +26,13 @@ class AddRestuarantAdminViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        restuarantImageView.image = UIImage(named: imgUrl)
         
+        addNewAdminBtn.layer.cornerRadius = addNewAdminBtn.frame.height / 2
+        addNewAdminBtn.layer.masksToBounds = true
+        
+            restuarantImageView.sd_setShowActivityIndicatorView(true)
+        restuarantImageView.sd_setIndicatorStyle(.gray)
+        restuarantImageView.sd_setImage(with: URL(string: ImageAPI.getImage(type: .original, publicId: imgUrl)), completed: nil)
         
         
         
@@ -55,16 +60,22 @@ class AddRestuarantAdminViewController: UIViewController {
         restaurantDao.addRestuarantAdmin(restuarantId: id, adminEmail: adminEmail, adminPassword: adminPassword , completionHandler: {(idAdded) in
             SVProgressHUD.dismiss()
             if idAdded {
-            SVProgressHUD.showSuccess(withStatus: "Resaurant Admin Added Successfully")
+            
             // return to users table >> home
                 
-                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let usersListVC = storyboard.instantiateViewController(withIdentifier: "displayUserVC")
+                SVProgressHUD.showSuccess(withStatus: "Restaurant Admin Added Successfully")
+
+                self.navigationController?.pushViewController(usersListVC, animated: true)
             
             }
             else {
                 SVProgressHUD.showError(withStatus: "Error While Adding New Admin")
+                
             
             }
+            
             
             
          

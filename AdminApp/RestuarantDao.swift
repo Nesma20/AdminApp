@@ -28,42 +28,29 @@ class RestuarantDao {
     
     switch response.result {
     case .success(let data):
-    print (data)
+        
     let myJsonData = JSON(data)
-    guard let code = myJsonData["code"].int else{
-        
-    return
-    }
     
-    if(code == 0)
-    {
-    
-        
     print(myJsonData)
+    
+    guard let code = myJsonData["code"].int else {
+        return
     }
-    else if code == 1{
     
-       let id = myJsonData["id"].int
+    restaurantId = myJsonData["id"].intValue
+    print("~~~~~~~restaurnt id : \(restaurantId)")
+    completionHandler(restaurantId)
         
-        restaurantId = id!
-        
-  
-    
-    
-    }
-   completionHandler(restaurantId)
-    
-    
     case .failure(let error):
-   
-    print("there is error in connection")
-    print(error)
-     completionHandler(restaurantId)
-    
-    
-    }
         
-    }
+        print("there is error in connection")
+        print(error)
+        completionHandler(restaurantId)
+        
+        
+        }
+        
+        }
     
     }
     func addRestuarantAdmin(restuarantId :String, adminEmail:String,adminPassword:String,completionHandler:@escaping (Bool)->Void){

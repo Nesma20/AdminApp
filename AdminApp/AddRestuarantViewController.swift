@@ -14,8 +14,9 @@ class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
     var lat:Double?
     var longt:Double?
     var check:Bool = true
-    var isValidName, isValidCity, isValidCountry : Bool?
+    var isValidName, isValidCity, isValidCountry,isImageUploaded : Bool?
     
+    @IBOutlet weak var addPhotoBtn: UIButton!
     var restaurantDao = RestuarantDao()
     @IBOutlet weak var resturantImage: UIImageView!
     
@@ -37,10 +38,15 @@ class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        isImageUploaded = false
         isValidName = false
         isValidCity = false
         isValidCountry = false
+        
+        addPhotoBtn.layer.cornerRadius = addPhotoBtn.frame.height / 2
+        addPhotoBtn.layer.masksToBounds = true
+        addRestuarantBtn.layer.cornerRadius = addRestuarantBtn.frame.height / 2
+        addRestuarantBtn.layer.masksToBounds = true
         
         
     }
@@ -76,13 +82,13 @@ class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
         
         if (sender.text?.isEmpty)! {
             isValidCountry = false
-            countryTxtField.text = "Country is required!"
+            countryErrorLabel.text = "Country is required!"
             
             
         }
         else{
             isValidCountry = true
-            countryTxtField.text = ""
+            countryErrorLabel.text = ""
 
             
         }
@@ -140,12 +146,21 @@ class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
         
         restaurantDao.addRestuarant(name: resturantName, city: city, country: country, longitude: longitude, latitude: latitude, restaurantImage: restaurantData.image!, completionHandler: {(id)
         in
+            SVProgressHUD.dismiss()
+            
             if id==0 {
+                
             
             print("no data saved")
+                SVProgressHUD.showError(withStatus: "Unfortianatly No Data Saved")
             }
             else{
-            print("Restaurant Saved")
+            SVProgressHUD.showSuccess(withStatus:"Restaurant Saved Successfully")
+                
+           let restaurantAdminVC = self.storyboard?.instantiateViewController(withIdentifier: "restaurantAdminVC") as! AddRestuarantAdminViewController
+            restaurantAdminVC.restaurantId = id
+            restaurantAdminVC.imgUrl = self.restaurantData.image
+                self.navigationController?.pushViewController(restaurantAdminVC, animated: true)
                 
             
             }
