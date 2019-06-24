@@ -13,7 +13,7 @@ struct AdminAPI {
         private static let baseUrlString = "https://et3am.herokuapp.com"
         static let baseUserUrlString = "\(baseUrlString)/user"
         static let baseAdminUrlString = "\(baseUrlString)/admin"
-        static let baseRestuarantUrlString = "\(baseUrlString)"
+        static let baseRestuarantUrlString = "\(baseUrlString)/restaurant"
 
 }
 

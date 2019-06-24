@@ -12,6 +12,8 @@ enum AdminURLQueryURL : String {
     case login = "/validate/login"
     case email = "email"
     case password = "password"
+    case resturant_admin = "add_restaurant_admin"
+case restauran_id="restaurant_id"
 }
 enum UserQueriesURL : String {
 case validate = "/verify_or_block"
@@ -21,8 +23,14 @@ case verified="verified_id"
     
 }
 enum RestaurantQueriesURL : String {
-case restuarant="add_resturant"
-case resturantAdmin = "add_restuarant/admin"
+case add_restuarant="add_restuarant"
+    case restaurant_name="restuarant_name"
+    case city="city"
+    case country="country"
+    case longitude="longitude"
+    case latitude="latitude"
+    case restaurant_image = "restaurant_image"
+    
 
 }
 

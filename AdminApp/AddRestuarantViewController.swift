@@ -8,15 +8,23 @@
 
 import UIKit
 import SVProgressHUD
-class AddRestuarantViewController: UIViewController {
-
+import CoreLocation
+class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
+    var lat:Double?
+    var longt:Double?
+    var check:Bool = true
+    var isValidName, isValidCity, isValidCountry : Bool?
+    
+    var restaurantDao = RestuarantDao()
     @IBOutlet weak var resturantImage: UIImageView!
+    
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var resturantNameTxtField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var countryTxtField: UITextField!
     @IBOutlet weak var longitudeTxtField: UITextField!
     @IBOutlet weak var latitudeTxtField: UITextField!
-   
     @IBOutlet weak var addRestuarantBtn: UIButton!
     var restaurantData = Restaurant()
     @IBOutlet weak var nameErrorLabel: UILabel!
@@ -30,13 +38,70 @@ class AddRestuarantViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        
+        isValidName = false
+        isValidCity = false
+        isValidCountry = false
         
         
     }
+    
+    @IBAction func nameTxtChangedAction(_ sender: UITextField) {
+        if (sender.text?.isEmpty)! {
+        isValidName = false
+            nameErrorLabel.text = "The Name is required!"
+        }
+        else{
+         isValidName = true
+        nameErrorLabel.text = ""
+        }
+        enableAddingButton()
+    }
+    
+    @IBAction func cityTxtChangedAction(_ sender: UITextField) {
+        if (sender.text?.isEmpty)! {
+            isValidCity = false
+            cityErrorLabel.text = "City is required!"
+            
+        }
+        else{
+            isValidCity = true
+             cityErrorLabel.text = ""
+            
+        }
+        enableAddingButton()
 
+    }
+    
+    @IBAction func countryTxtChnaged(_ sender: UITextField) {
+        
+        if (sender.text?.isEmpty)! {
+            isValidCountry = false
+            countryTxtField.text = "Country is required!"
+            
+            
+        }
+        else{
+            isValidCountry = true
+            countryTxtField.text = ""
+
+            
+        }
+        enableAddingButton()
+
+    }
+    
+    func enableAddingButton(){
+        if isValidName! && isValidCity! && isValidCountry! {
+            addRestuarantBtn.isEnabled = true;
+        
+        }
+        else {
+            addRestuarantBtn.isEnabled = false;
+
+        }
+    }
+    
     @IBAction func addRestuarantBtnAction(_ sender: Any) {
-      
         addRestuarantBtn.isEnabled = false
         SVProgressHUD.show()
         guard let resturantName = resturantNameTxtField.text , !resturantName.isEmpty else {
@@ -68,11 +133,28 @@ class AddRestuarantViewController: UIViewController {
             return
         }
         
-        // add function for insert data 
+        //MARK-: add function for insert data
+        
+        addRestuarantBtn.isEnabled = false;
+        SVProgressHUD.show()
+        
+        restaurantDao.addRestuarant(name: resturantName, city: city, country: country, longitude: longitude, latitude: latitude, restaurantImage: restaurantData.image!, completionHandler: {(id)
+        in
+            if id==0 {
+            
+            print("no data saved")
+            }
+            else{
+            print("Restaurant Saved")
+                
+            
+            }
+            
+        })
         
         
     }
-  
+
     @IBAction func addPhotoBtnAction(_ sender: Any) {
         let myPickerController = UIImagePickerController()
         
@@ -86,9 +168,11 @@ class AddRestuarantViewController: UIViewController {
         }
         
     }
-    
 
-}
+    }
+
+
+
 
 
 
@@ -99,7 +183,7 @@ extension AddRestuarantViewController: UIImagePickerControllerDelegate, UINaviga
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             let imageData: Data = UIImageJPEGRepresentation(image, 0.2)!
             
-            uploadUserImage(imageData)
+            uploadImage(imageData)
             
             resturantImage.image = image
         }
@@ -112,7 +196,7 @@ extension AddRestuarantViewController: UIImagePickerControllerDelegate, UINaviga
 //MARK: - Image Uploading
 extension AddRestuarantViewController {
     
-    func uploadUserImage(_ imageData: Data) {
+    func uploadImage(_ imageData: Data) {
         
         uploadStarts()
         
@@ -128,7 +212,7 @@ extension AddRestuarantViewController {
     
     
     func uploadStarts() {
-      //  imageActivityIndicator.startAnimating()
+      imageActivityIndicator.startAnimating()
         SVProgressHUD.showInfo(withStatus: "Image Was Uploading")
         
        resturantImage.alpha = 0.3
@@ -136,13 +220,96 @@ extension AddRestuarantViewController {
     
     
     func uploadCompleted() {
-       // imageActivityIndicator.stopAnimating()
+       imageActivityIndicator.stopAnimating()
         SVProgressHUD.dismiss()
         resturantImage.alpha = 1.0
         
     }
     
+    @IBAction func chooseLocationFromMap(_ sender: UIButton) {
+        let mapVc = storyboard?.instantiateViewController(withIdentifier: "mapVC") as! mapViewController
+        mapVc.mapViewSelectionDelegate = self
+        present(mapVc, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    // 1
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let currentLocation = locations.last {
+            
+            
+            if check {
+                print("Current location: \(currentLocation)")
+                let coordinate = manager.location?.coordinate
+                self.lat = coordinate?.latitude
+                self.longt = coordinate?.longitude
+                self.latitudeTxtField.text = String(describing: self.lat!)
+                self.longitudeTxtField.text = String(describing: self.longt!)
+            }
+        }
+    }
+    
+    // 2
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    
+    
+    
+    @IBAction func getCurrentLocationButton(_ sender: UIButton) {
+        
+        // 1
+        let status = CLLocationManager.authorizationStatus()
+        
+        switch status {
+        // 1
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            return
+            
+        // 2
+        case .denied, .restricted:
+            let alert = UIAlertController(title: "Location Services disabled", message: "Please enable Location Services in Settings", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            
+            present(alert, animated: true, completion: nil)
+            return
+        case .authorizedAlways, .authorizedWhenInUse:
+            
+            break
+            
+        }
+        
+        // 4
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        
+        
+        
+    }
+
     
     
 }
+
+extension AddRestuarantViewController : MapViewSelectionDelegate {
+    
+    func setCoordinates(latInDelegate:Double , longtInDelegate:Double, isChecked:Bool) {
+        
+        self.check = isChecked
+        self.latitudeTxtField.text = ""
+        self.longitudeTxtField.text = ""
+        
+        self.latitudeTxtField.text = String(describing: latInDelegate) ?? "No Location Selected"
+        self.longitudeTxtField.text = String(describing: longtInDelegate) ?? "No Location Selected"
+        
+        
+    }
+    
+}
+
 

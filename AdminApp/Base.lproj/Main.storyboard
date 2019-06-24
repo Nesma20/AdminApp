@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QVR-GT-R4A" id="uKq-zp-eK1">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="scN-vL-Snh">
@@ -350,10 +350,10 @@
             </objects>
             <point key="canvasLocation" x="2202.898550724638" y="123.91304347826087"/>
         </scene>
-        <!--Add Restuarant View Controller-->
+        <!--View Controller-->
         <scene sceneID="RZq-9z-Stb">
             <objects>
-                <viewController id="qV3-rX-7FI" customClass="AddRestuarantViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qV3-rX-7FI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p77-w7-2eF"/>
                         <viewControllerLayoutGuide type="bottom" id="K0F-zi-qqB"/>
@@ -389,9 +389,6 @@
                                                         <state key="normal" title="Add Photo">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="addPhotoBtnAction:" destination="qV3-rX-7FI" eventType="touchUpInside" id="4Md-qW-IfH"/>
-                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ4-YF-b2L">
                                                         <rect key="frame" x="0.0" y="198" width="280" height="30"/>
@@ -612,9 +609,6 @@
                                                         <state key="normal" title="Add Resturant">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="addRestuarantBtnAction:" destination="qV3-rX-7FI" eventType="touchUpInside" id="skZ-Ky-kJS"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -650,29 +644,15 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1000"/>
-                    <connections>
-                        <outlet property="addRestuarantBtn" destination="w7g-O7-OWg" id="iFB-g9-eEA"/>
-                        <outlet property="cityErrorLabel" destination="clB-bU-Ln5" id="WSZ-tW-oNg"/>
-                        <outlet property="cityTextField" destination="f9O-p6-vBT" id="Ir8-0A-Kh3"/>
-                        <outlet property="countryErrorLabel" destination="xeX-I2-8I8" id="lVi-Kj-fwy"/>
-                        <outlet property="countryTxtField" destination="JwA-6p-OC8" id="LsV-Vm-btO"/>
-                        <outlet property="latitudeErrorLabel" destination="Aa9-zF-zPT" id="L4Y-2G-G1w"/>
-                        <outlet property="latitudeTxtField" destination="GPL-rE-Y5w" id="6jC-KT-NT8"/>
-                        <outlet property="longitudeErrorLabel" destination="Vtq-Au-ewm" id="ip0-jT-XVl"/>
-                        <outlet property="longitudeTxtField" destination="ugt-V9-BJk" id="NNs-LK-dZY"/>
-                        <outlet property="nameErrorLabel" destination="BX3-Wg-fjg" id="v8j-Aq-YYb"/>
-                        <outlet property="resturantImage" destination="RN5-mU-Lwg" id="rpN-36-hNd"/>
-                        <outlet property="resturantNameTxtField" destination="Vvf-rR-wSn" id="SXw-zv-dRC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1y-jD-RdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3100.0000000000005" y="915.48913043478262"/>
         </scene>
-        <!--Add Restuarant Admin View Controller-->
+        <!--View Controller-->
         <scene sceneID="v2C-3D-1v9">
             <objects>
-                <viewController id="fjF-TS-Nq5" customClass="AddRestuarantAdminViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fjF-TS-Nq5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cg3-Ti-mhe"/>
                         <viewControllerLayoutGuide type="bottom" id="tdZ-lJ-hHe"/>
@@ -777,7 +757,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JNp-lW-MvA" firstAttribute="leading" secondItem="84m-lj-5Da" secondAttribute="leadingMargin" constant="29" id="5gY-th-g2s"/>
-                            <constraint firstItem="JNp-lW-MvA" firstAttribute="top" secondItem="cg3-Ti-mhe" secondAttribute="bottom" constant="70" id="9Bs-8c-JF6"/>
+                            <constraint firstItem="JNp-lW-MvA" firstAttribute="top" secondItem="cg3-Ti-mhe" secondAttribute="bottom" constant="70" id="5mQ-a4-sAa"/>
                             <constraint firstItem="JNp-lW-MvA" firstAttribute="centerX" secondItem="84m-lj-5Da" secondAttribute="centerX" id="zMP-vl-DUV"/>
                         </constraints>
                     </view>

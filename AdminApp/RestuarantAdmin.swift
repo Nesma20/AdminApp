@@ -8,7 +8,7 @@
 
 import Foundation
 class ResturantAdmin{
-    var restuarantAminEmail:String?
+    var restuarantAdminEmail:String?
     var restuarantAdminPassword:String?
     var restuarantId :String?
 

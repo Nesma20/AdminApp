@@ -42,84 +42,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdminApp/AddRestuarantViewController.swift"
-            timestampString = "582938882.235713"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "AddRestuarantViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdminApp.AddRestuarantViewController.resturantImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
-                  moduleName = "AdminApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
-                  timestampString = "582938884.5383379"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdminApp.AddRestuarantViewController.resturantImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
-                  moduleName = "AdminApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
-                  timestampString = "582938884.553457"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdminApp.AddRestuarantViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AdminApp.AddRestuarantViewController"
-                  moduleName = "AdminApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
-                  timestampString = "582938884.56398"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AdminApp.AddRestuarantViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AdminApp.AddRestuarantViewController&gt;"
-                  moduleName = "AdminApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
-                  timestampString = "582938884.575557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AdminApp/AddRestuarantViewController.swift"
             timestampString = "582938960.968249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -205,6 +127,116 @@
             endingLineNumber = "11"
             landmarkName = "RestuarantDao"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdminApp/AddRestuarantViewController.swift"
+            timestampString = "583022105.713088"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "countryTxtChnaged(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdminApp/AddRestuarantViewController.swift"
+            timestampString = "583022486.421198"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "addRestuarantBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AdminApp/AddRestuarantViewController.swift"
+            timestampString = "583023559.538015"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AddRestuarantViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdminApp.AddRestuarantViewController.resturantImage.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "AdminApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
+                  timestampString = "583023560.017343"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdminApp.AddRestuarantViewController.resturantImage.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "AdminApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
+                  timestampString = "583023560.041218"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdminApp.AddRestuarantViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AdminApp.AddRestuarantViewController"
+                  moduleName = "AdminApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
+                  timestampString = "583023560.067763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdminApp.AddRestuarantViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AdminApp.AddRestuarantViewController&gt;"
+                  moduleName = "AdminApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jets39/Desktop/Admin/AdminApp/AdminApp/AddRestuarantViewController.swift"
+                  timestampString = "583023560.092862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
