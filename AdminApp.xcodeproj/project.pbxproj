@@ -38,6 +38,9 @@
 		C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */; };
 		C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */; };
 		C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */; };
+		E28DB98422D26E1300475823 /* AdminSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */; };
+		E28DB98622D26E4600475823 /* AdminSummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28DB98522D26E4600475823 /* AdminSummary.storyboard */; };
+		E28DB98822D2727E00475823 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB98722D2727E00475823 /* Summary.swift */; };
 		EC6E84A1489A6BA53780DB7C /* Pods_AdminAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C34A9E58C6C9D8352DD62DD /* Pods_AdminAppUITests.framework */; };
 		F28BE11BDF48C17FD4DACDDA /* Pods_AdminAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +107,9 @@
 		C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlQueries.swift; sourceTree = "<group>"; };
 		C4F699638A43BC7DBDD6B286 /* Pods-AdminAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppTests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppTests/Pods-AdminAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2BE9FD127DBBD72DD9EC9C /* Pods-AdminApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp/Pods-AdminApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminSummaryViewController.swift; sourceTree = "<group>"; };
+		E28DB98522D26E4600475823 /* AdminSummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdminSummary.storyboard; sourceTree = "<group>"; };
+		E28DB98722D2727E00475823 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		F1E96015252B3EEE952A9FC0 /* Pods-AdminAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AdminAppTests/Pods-AdminAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +247,7 @@
 				C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */,
 				83CF238722C000D000D568E5 /* TrySomething.storyboard */,
 				C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */,
+				E28DB98522D26E4600475823 /* AdminSummary.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 				C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */,
 				83CF238122BFAB2900D568E5 /* mapViewController.swift */,
 				83CF238322BFD9D900D568E5 /* DemoVC.swift */,
+				E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				C37F80FA22A15BA700BAFE40 /* Admin.swift */,
 				C3193F9422BEF73C00168F58 /* Restuarant.swift */,
 				C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */,
+				E28DB98722D2727E00475823 /* Summary.swift */,
 			);
 			name = "Data Layer";
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 				C37F80D022A1269900BAFE40 /* LaunchScreen.storyboard in Resources */,
 				C37F80CD22A1269900BAFE40 /* Assets.xcassets in Resources */,
 				C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */,
+				E28DB98622D26E4600475823 /* AdminSummary.storyboard in Resources */,
 				83CF238822C000D000D568E5 /* TrySomething.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +521,7 @@
 				C3193F9B22BF84DA00168F58 /* AddRestuarantAdminViewController.swift in Sources */,
 				C35E380E22A36E7A0069DFAF /* AdminDao.swift in Sources */,
 				C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */,
+				E28DB98422D26E1300475823 /* AdminSummaryViewController.swift in Sources */,
 				C37F810222A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift in Sources */,
 				C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */,
 				C37F810022A169BE00BAFE40 /* User.swift in Sources */,
@@ -520,6 +531,7 @@
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
 				C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
+				E28DB98822D2727E00475823 /* Summary.swift in Sources */,
 				C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */,
 				C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */,
 				C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */,

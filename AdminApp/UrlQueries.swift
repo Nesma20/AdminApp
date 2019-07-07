@@ -7,30 +7,33 @@
 //
 
 import Foundation
-enum AdminURLQueryURL : String {
 
+enum AdminURLQueryURL : String {
     case login = "/validate/login"
     case email = "email"
     case password = "password"
     case resturant_admin = "/add_restaurant_admin"
-case restauran_id="restaurant_id"
-}
-enum UserQueriesURL : String {
-case validate = "/verify_or_block"
-case getAllUsersWhoWantToBeValidate = "/list_verified"
-case user_id = "user_id"
-case verified="verified_id"
+    case restauran_id="restaurant_id"
+    case summary = "/summary"
     
+    func url() -> URL {
+        return URL(string: AdminAPI.baseAdminUrlString + self.rawValue)!
+    }
 }
+
+enum UserQueriesURL : String {
+    case validate = "/verify_or_block"
+    case getAllUsersWhoWantToBeValidate = "/list_verified"
+    case user_id = "user_id"
+    case verified="verified_id"
+}
+
 enum RestaurantQueriesURL : String {
-case add_restuarant="/add_restuarant"
+    case add_restuarant="/add_restuarant"
     case restaurant_name="restuarant_name"
     case city="city"
     case country="country"
     case longitude="longitude"
     case latitude="latitude"
     case restaurant_image = "restaurant_image"
-    
-
 }
-
