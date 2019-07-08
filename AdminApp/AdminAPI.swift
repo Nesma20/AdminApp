@@ -14,6 +14,7 @@ struct AdminAPI {
         static let baseUserUrlString = "\(baseUrlString)/user"
         static let baseAdminUrlString = "\(baseUrlString)/admin"
         static let baseRestuarantUrlString = "\(baseUrlString)/restaurant"
+        static let baseInquiryUrlString = "\(baseUrlString)/inquiry"
 
 }
 

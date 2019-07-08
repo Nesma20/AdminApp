@@ -43,7 +43,7 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
     }
     
     @IBAction func addRestaurantAction(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard(name: "TrySomething", bundle: nil)
+        let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
         let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
         self.navigationController?.pushViewController(AddResturantVC, animated: true)
     }
@@ -68,7 +68,7 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
     }
     
     func addRestaurantBtn(btn:UIBarButtonItem){
-     let storyboard = UIStoryboard(name: "trySomething", bundle: nil)
+     let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
        let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
         self.navigationController?.pushViewController(AddResturantVC, animated: true)
         

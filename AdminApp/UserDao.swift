@@ -27,7 +27,7 @@ class UserDao{
                 let jsonData = JSON(value)
                 
                 print(jsonData)
-                for (index, object) in jsonData {
+                for (_, object) in jsonData {
                     let user = User()
                     user.userID = object["userId"].stringValue
                     user.userName = object["userName"].stringValue
@@ -49,7 +49,7 @@ class UserDao{
                     }
                    usersListData.append(user)
                 }
-                print("vvvv\(usersListData.count)")
+                print("vvvv  \(usersListData.count)")
                 completionHandler(usersListData)
                 
             case .failure(let error):

@@ -7,107 +7,66 @@
 //
 
 import UIKit
-import CoreLocation
+import Alamofire
+import SwiftyJSON
 
-class DemoVC: UIViewController ,  CLLocationManagerDelegate {
+class DemoVC: UIViewController {
 
+    @IBOutlet weak var emailTxtField: UITextField!
     
+    @IBOutlet weak var passTxtField: UITextField!
+     @IBOutlet weak var txtArea: UITextView!
     
-    @IBOutlet weak var longitudeText: UITextField!
-    @IBOutlet weak var latitudeText: UITextField!
-    let locationManager = CLLocationManager()
-    var lat:Double?
-    var longt:Double?
-    var check:Bool = true
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    @IBAction func signInAction(_ sender: Any) {
+        
+        
+        let parameters: [String:String] = ["email" : emailTxtField.text!,
+                                           "password" : passTxtField.text!]
+        var userFound : Bool!
         
         
         
-    }
-    
-    @IBAction func chooseLocationFromMap(_ sender: Any) {
-       let mapVc = storyboard?.instantiateViewController(withIdentifier: "mapVC") as! mapViewController
-        mapVc.mapViewSelectionDelegate = self
-        present(mapVc, animated: true, completion: nil)
         
-        
-    }
-    
-    
-    // 1
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let currentLocation = locations.last {
+        Alamofire.request("http://graduation.3gb.work/auth/loginapi", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON{
+            response in
             
-            
-            if check {
-                print("Current location: \(currentLocation)")
-                let coordinate = manager.location?.coordinate
-                self.lat = coordinate?.latitude
-                self.longt = coordinate?.longitude
-                self.latitudeText.text = String(describing: self.lat!)
-                self.longitudeText.text = String(describing: self.longt!)
+            switch response.result {
+            case .success(let data):
+                print (data)
+                let myJsonData = JSON(data)
+                if myJsonData["id"].string != nil {
+                    self.txtArea.text=myJsonData["first_name"].string! + myJsonData["last_name"].string!
+                    
+                    
+                }
+                
+                if let errorMessage = myJsonData["error"].string  {
+                    
+                    self.txtArea.text=errorMessage
+                    
+                    
+                    
+                    
+                }
+                
+                
+                
+            case .failure(let error):
+                userFound = false
+                print("there is error in connection")
+                print(error)
+                
+                
+                
             }
-      }
-    }
-    
-    // 2
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
-    
-    
-    
-
-    @IBAction func getCurrentLocationButton(_ sender: Any) {
-        
-        // 1
-        let status = CLLocationManager.authorizationStatus()
-        
-        switch status {
-        // 1
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-            return
             
-        // 2
-        case .denied, .restricted:
-            let alert = UIAlertController(title: "Location Services disabled", message: "Please enable Location Services in Settings", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(okAction)
-            
-            present(alert, animated: true, completion: nil)
-            return
-        case .authorizedAlways, .authorizedWhenInUse:
-            
-            break
             
         }
         
-        // 4
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
         
 
-        
     }
-    
-
+   
 }
-extension DemoVC : MapViewSelectionDelegate {
 
-    func setCoordinates(latInDelegate:Double , longtInDelegate:Double, isChecked:Bool) {
-        
-        self.check = isChecked
-        self.latitudeText.text = ""
-        self.longitudeText.text = ""
-        
-        self.latitudeText.text = String(describing: latInDelegate) ?? "No Location Selected"
-        self.longitudeText.text = String(describing: longtInDelegate) ?? "No Location Selected"
-        
-        
-    
-    
-    }
-
-}
