@@ -38,6 +38,11 @@
 		C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */; };
 		C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */; };
 		C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */; };
+		E21338B922D3A9C4001BCA41 /* SummaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21338B722D3A9C4001BCA41 /* SummaryCollectionViewCell.swift */; };
+		E21338BA22D3A9C4001BCA41 /* SummaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21338B822D3A9C4001BCA41 /* SummaryCollectionViewCell.xib */; };
+		E24A8EF022D3676F00AA017B /* MyLineChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A8EEF22D3676F00AA017B /* MyLineChartDataSet.swift */; };
+		E24A8EF222D3699500AA017B /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A8EF122D3699500AA017B /* LineChartView.swift */; };
+		E24A8EF422D37FD200AA017B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A8EF322D37FD200AA017B /* UIColor.swift */; };
 		E28DB98422D26E1300475823 /* AdminSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */; };
 		E28DB98622D26E4600475823 /* AdminSummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28DB98522D26E4600475823 /* AdminSummary.storyboard */; };
 		E28DB98822D2727E00475823 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28DB98722D2727E00475823 /* Summary.swift */; };
@@ -107,6 +112,11 @@
 		C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlQueries.swift; sourceTree = "<group>"; };
 		C4F699638A43BC7DBDD6B286 /* Pods-AdminAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppTests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppTests/Pods-AdminAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2BE9FD127DBBD72DD9EC9C /* Pods-AdminApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp/Pods-AdminApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E21338B722D3A9C4001BCA41 /* SummaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SummaryCollectionViewCell.swift; path = View/SummaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		E21338B822D3A9C4001BCA41 /* SummaryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SummaryCollectionViewCell.xib; path = View/SummaryCollectionViewCell.xib; sourceTree = "<group>"; };
+		E24A8EEF22D3676F00AA017B /* MyLineChartDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyLineChartDataSet.swift; path = Extensions/MyLineChartDataSet.swift; sourceTree = "<group>"; };
+		E24A8EF122D3699500AA017B /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChartView.swift; path = Extensions/LineChartView.swift; sourceTree = "<group>"; };
+		E24A8EF322D37FD200AA017B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminSummaryViewController.swift; sourceTree = "<group>"; };
 		E28DB98522D26E4600475823 /* AdminSummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdminSummary.storyboard; sourceTree = "<group>"; };
 		E28DB98722D2727E00475823 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
@@ -200,6 +210,7 @@
 		C37F80C422A1269900BAFE40 /* AdminApp */ = {
 			isa = PBXGroup;
 			children = (
+				E24A8EEE22D3675300AA017B /* Extensions */,
 				C36F131622BBD3F7009773FB /* Delegates */,
 				C37F80F922A15B5E00BAFE40 /* Controller */,
 				C37F80F822A15B5200BAFE40 /* View */,
@@ -248,6 +259,8 @@
 				83CF238722C000D000D568E5 /* TrySomething.storyboard */,
 				C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */,
 				E28DB98522D26E4600475823 /* AdminSummary.storyboard */,
+				E21338B722D3A9C4001BCA41 /* SummaryCollectionViewCell.swift */,
+				E21338B822D3A9C4001BCA41 /* SummaryCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -290,6 +303,16 @@
 				C3193F9822BF016000168F58 /* RestuarantDao.swift */,
 			);
 			name = "Network Layer";
+			sourceTree = "<group>";
+		};
+		E24A8EEE22D3675300AA017B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E24A8EF322D37FD200AA017B /* UIColor.swift */,
+				E24A8EEF22D3676F00AA017B /* MyLineChartDataSet.swift */,
+				E24A8EF122D3699500AA017B /* LineChartView.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +431,7 @@
 				C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */,
 				E28DB98622D26E4600475823 /* AdminSummary.storyboard in Resources */,
 				83CF238822C000D000D568E5 /* TrySomething.storyboard in Resources */,
+				E21338BA22D3A9C4001BCA41 /* SummaryCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +461,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-AdminApp/Pods-AdminApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -445,6 +470,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -516,9 +542,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C336AC5E22BAA6BF00478403 /* VerificationViewController.swift in Sources */,
+				E24A8EF422D37FD200AA017B /* UIColor.swift in Sources */,
 				C35E381422A3786E0069DFAF /* UserDao.swift in Sources */,
 				C3193F9722BEF78400168F58 /* RestuarantAdmin.swift in Sources */,
 				C3193F9B22BF84DA00168F58 /* AddRestuarantAdminViewController.swift in Sources */,
+				E21338B922D3A9C4001BCA41 /* SummaryCollectionViewCell.swift in Sources */,
 				C35E380E22A36E7A0069DFAF /* AdminDao.swift in Sources */,
 				C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */,
 				E28DB98422D26E1300475823 /* AdminSummaryViewController.swift in Sources */,
@@ -531,6 +559,7 @@
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
 				C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
+				E24A8EF222D3699500AA017B /* LineChartView.swift in Sources */,
 				E28DB98822D2727E00475823 /* Summary.swift in Sources */,
 				C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */,
 				C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */,
@@ -540,6 +569,7 @@
 				83CF238222BFAB2900D568E5 /* mapViewController.swift in Sources */,
 				C35E381022A36FB50069DFAF /* AdminAPI.swift in Sources */,
 				C3193F9922BF016000168F58 /* RestuarantDao.swift in Sources */,
+				E24A8EF022D3676F00AA017B /* MyLineChartDataSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
