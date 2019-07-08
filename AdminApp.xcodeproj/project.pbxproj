@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		83CF238222BFAB2900D568E5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF238122BFAB2900D568E5 /* mapViewController.swift */; };
-		83CF238422BFD9D900D568E5 /* DemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF238322BFD9D900D568E5 /* DemoVC.swift */; };
 		83CF238622BFDF7000D568E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CF238522BFDF7000D568E5 /* CoreLocation.framework */; };
-		83CF238822C000D000D568E5 /* TrySomething.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CF238722C000D000D568E5 /* TrySomething.storyboard */; };
+		83CF238822C000D000D568E5 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CF238722C000D000D568E5 /* Restaurants.storyboard */; };
 		B8C3BBFAA001269097EBDCEB /* Pods_AdminApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224283784F4CBD3CF4E4C6E3 /* Pods_AdminApp.framework */; };
 		C3193F9322BEE13700168F58 /* AddRestuarantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */; };
 		C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3193F9422BEF73C00168F58 /* Restuarant.swift */; };
@@ -25,6 +24,8 @@
 		C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E381122A375EA0069DFAF /* AdminDelegate.swift */; };
 		C35E381422A3786E0069DFAF /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E381322A3786E0069DFAF /* UserDao.swift */; };
 		C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36F131722BBD419009773FB /* UsersListDelegate.swift */; };
+		C3779C5C22D1934700EA6F09 /* InquiryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3779C5B22D1934700EA6F09 /* InquiryDetailsViewController.swift */; };
+		C3779C5E22D2825900EA6F09 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3779C5D22D2825900EA6F09 /* Dashboard.storyboard */; };
 		C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80C522A1269900BAFE40 /* AppDelegate.swift */; };
 		C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80C722A1269900BAFE40 /* ViewController.swift */; };
 		C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37F80C922A1269900BAFE40 /* Main.storyboard */; };
@@ -36,7 +37,12 @@
 		C37F810022A169BE00BAFE40 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F80FF22A169BE00BAFE40 /* User.swift */; };
 		C37F810222A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */; };
 		C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */; };
+		C3819BFB22CFFE8600697411 /* Inquiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3819BFA22CFFE8600697411 /* Inquiry.swift */; };
+		C3819BFD22D0046700697411 /* InquiryDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3819BFC22D0046700697411 /* InquiryDao.swift */; };
 		C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */; };
+		C3A2B8E022CED13C000C0559 /* UpdateRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2B8DF22CED13C000C0559 /* UpdateRestaurantViewController.swift */; };
+		C3A2B8E222CED75B000C0559 /* InquiriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2B8E122CED75B000C0559 /* InquiriesTableViewController.swift */; };
+		C3A2B8E422CEE022000C0559 /* UserInquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2B8E322CEE022000C0559 /* UserInquiryTableViewCell.swift */; };
 		C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */; };
 		EC6E84A1489A6BA53780DB7C /* Pods_AdminAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C34A9E58C6C9D8352DD62DD /* Pods_AdminAppUITests.framework */; };
 		F28BE11BDF48C17FD4DACDDA /* Pods_AdminAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */; };
@@ -67,9 +73,8 @@
 		336CDEE07D3415642E8B603D /* Pods-AdminAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppUITests/Pods-AdminAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		80BD4439E91A591261688A06 /* Pods_AdminAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdminAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CF238122BFAB2900D568E5 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
-		83CF238322BFD9D900D568E5 /* DemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoVC.swift; sourceTree = "<group>"; };
 		83CF238522BFDF7000D568E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		83CF238722C000D000D568E5 /* TrySomething.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrySomething.storyboard; sourceTree = "<group>"; };
+		83CF238722C000D000D568E5 /* Restaurants.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		C3193F9222BEE13700168F58 /* AddRestuarantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestuarantViewController.swift; sourceTree = "<group>"; };
 		C3193F9422BEF73C00168F58 /* Restuarant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restuarant.swift; sourceTree = "<group>"; };
 		C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantAdmin.swift; sourceTree = "<group>"; };
@@ -83,6 +88,8 @@
 		C35E381122A375EA0069DFAF /* AdminDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminDelegate.swift; sourceTree = "<group>"; };
 		C35E381322A3786E0069DFAF /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		C36F131722BBD419009773FB /* UsersListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListDelegate.swift; sourceTree = "<group>"; };
+		C3779C5B22D1934700EA6F09 /* InquiryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InquiryDetailsViewController.swift; sourceTree = "<group>"; };
+		C3779C5D22D2825900EA6F09 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		C37F80C222A1269900BAFE40 /* AdminApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdminApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37F80C522A1269900BAFE40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37F80C722A1269900BAFE40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +107,12 @@
 		C37F80FF22A169BE00BAFE40 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C37F810122A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUsersForVerifiedViewController.swift; sourceTree = "<group>"; };
 		C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayUsersTableViewCell.swift; sourceTree = "<group>"; };
+		C3819BFA22CFFE8600697411 /* Inquiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inquiry.swift; sourceTree = "<group>"; };
+		C3819BFC22D0046700697411 /* InquiryDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InquiryDao.swift; sourceTree = "<group>"; };
 		C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		C3A2B8DF22CED13C000C0559 /* UpdateRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRestaurantViewController.swift; sourceTree = "<group>"; };
+		C3A2B8E122CED75B000C0559 /* InquiriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InquiriesTableViewController.swift; sourceTree = "<group>"; };
+		C3A2B8E322CEE022000C0559 /* UserInquiryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInquiryTableViewCell.swift; sourceTree = "<group>"; };
 		C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlQueries.swift; sourceTree = "<group>"; };
 		C4F699638A43BC7DBDD6B286 /* Pods-AdminAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminAppTests.release.xcconfig"; path = "Target Support Files/Pods-AdminAppTests/Pods-AdminAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2BE9FD127DBBD72DD9EC9C /* Pods-AdminApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdminApp.debug.xcconfig"; path = "Target Support Files/Pods-AdminApp/Pods-AdminApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,8 +251,10 @@
 				C37F80C922A1269900BAFE40 /* Main.storyboard */,
 				C38183D722B93EE8001AA4FD /* DisplayUsersTableViewCell.swift */,
 				C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */,
-				83CF238722C000D000D568E5 /* TrySomething.storyboard */,
+				83CF238722C000D000D568E5 /* Restaurants.storyboard */,
 				C39254DD22C0EA7B00EF9A91 /* RoundedButton.swift */,
+				C3A2B8E322CEE022000C0559 /* UserInquiryTableViewCell.swift */,
+				C3779C5D22D2825900EA6F09 /* Dashboard.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -254,7 +268,9 @@
 				C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */,
 				C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */,
 				83CF238122BFAB2900D568E5 /* mapViewController.swift */,
-				83CF238322BFD9D900D568E5 /* DemoVC.swift */,
+				C3A2B8DF22CED13C000C0559 /* UpdateRestaurantViewController.swift */,
+				C3A2B8E122CED75B000C0559 /* InquiriesTableViewController.swift */,
+				C3779C5B22D1934700EA6F09 /* InquiryDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +282,7 @@
 				C37F80FA22A15BA700BAFE40 /* Admin.swift */,
 				C3193F9422BEF73C00168F58 /* Restuarant.swift */,
 				C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */,
+				C3819BFA22CFFE8600697411 /* Inquiry.swift */,
 			);
 			name = "Data Layer";
 			sourceTree = "<group>";
@@ -279,6 +296,7 @@
 				C3BF9A0722B5C43C00EADCC3 /* UrlQueries.swift */,
 				C336AC5B22BA947B00478403 /* ImageAPI.swift */,
 				C3193F9822BF016000168F58 /* RestuarantDao.swift */,
+				C3819BFC22D0046700697411 /* InquiryDao.swift */,
 			);
 			name = "Network Layer";
 			sourceTree = "<group>";
@@ -395,9 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C37F80D022A1269900BAFE40 /* LaunchScreen.storyboard in Resources */,
+				C3779C5E22D2825900EA6F09 /* Dashboard.storyboard in Resources */,
 				C37F80CD22A1269900BAFE40 /* Assets.xcassets in Resources */,
 				C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */,
-				83CF238822C000D000D568E5 /* TrySomething.storyboard in Resources */,
+				83CF238822C000D000D568E5 /* Restaurants.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,22 +529,27 @@
 				C3193F9722BEF78400168F58 /* RestuarantAdmin.swift in Sources */,
 				C3193F9B22BF84DA00168F58 /* AddRestuarantAdminViewController.swift in Sources */,
 				C35E380E22A36E7A0069DFAF /* AdminDao.swift in Sources */,
+				C3A2B8E022CED13C000C0559 /* UpdateRestaurantViewController.swift in Sources */,
+				C3A2B8E222CED75B000C0559 /* InquiriesTableViewController.swift in Sources */,
+				C3779C5C22D1934700EA6F09 /* InquiryDetailsViewController.swift in Sources */,
 				C3BF9A0822B5C43C00EADCC3 /* UrlQueries.swift in Sources */,
 				C37F810222A17BF300BAFE40 /* DisplayUsersForVerifiedViewController.swift in Sources */,
 				C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */,
 				C37F810022A169BE00BAFE40 /* User.swift in Sources */,
 				C3193F9322BEE13700168F58 /* AddRestuarantViewController.swift in Sources */,
 				C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */,
-				83CF238422BFD9D900D568E5 /* DemoVC.swift in Sources */,
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
 				C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
 				C36F131822BBD419009773FB /* UsersListDelegate.swift in Sources */,
+				C3819BFB22CFFE8600697411 /* Inquiry.swift in Sources */,
 				C3193F9522BEF73C00168F58 /* Restuarant.swift in Sources */,
 				C37F80C622A1269900BAFE40 /* AppDelegate.swift in Sources */,
 				C336AC6222BADA1C00478403 /* imgeIDCollectionViewCell.swift in Sources */,
 				C336AC5C22BA947B00478403 /* ImageAPI.swift in Sources */,
 				83CF238222BFAB2900D568E5 /* mapViewController.swift in Sources */,
+				C3A2B8E422CEE022000C0559 /* UserInquiryTableViewCell.swift in Sources */,
+				C3819BFD22D0046700697411 /* InquiryDao.swift in Sources */,
 				C35E381022A36FB50069DFAF /* AdminAPI.swift in Sources */,
 				C3193F9922BF016000168F58 /* RestuarantDao.swift in Sources */,
 			);

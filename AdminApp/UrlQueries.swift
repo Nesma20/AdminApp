@@ -33,4 +33,9 @@ case add_restuarant="/add_restuarant"
     
 
 }
+enum InquiriyQueriesURL :String {
 
+case inquiry_list = "/list"
+case change_status = "/change_status"
+case inquiry_id = "id"
+}

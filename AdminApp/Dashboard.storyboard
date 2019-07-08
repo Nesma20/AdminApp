@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="txW-QF-iut">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ev-C7-Sfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="34p-PN-aJU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qH0-tG-5OA"/>
+                        <viewControllerLayoutGuide type="bottom" id="dk3-qW-Ae5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EOO-yp-VKW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfE-FI-3nI">
+                                <rect key="frame" x="38" y="176" width="300" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="csj-mT-tP6">
+                                        <rect key="frame" x="50" y="50" width="200" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-kG-5e7">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5gW-NY-HCY"/>
+                                                    <constraint firstAttribute="width" constant="200" id="kG1-nb-nTP"/>
+                                                </constraints>
+                                                <state key="normal" title="Users &amp; Inquiries"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YL-je-Oto">
+                                                <rect key="frame" x="0.0" y="50" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="DVI-mQ-XOT"/>
+                                                    <constraint firstAttribute="height" constant="50" id="aWd-Kj-iCj"/>
+                                                </constraints>
+                                                <state key="normal" title="Restaurants"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="YAz-bQ-lML"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Uby-4r-skz"/>
+                                    <constraint firstItem="csj-mT-tP6" firstAttribute="centerY" secondItem="EfE-FI-3nI" secondAttribute="centerY" id="YRq-GM-9WM"/>
+                                    <constraint firstAttribute="width" constant="300" id="mOz-kO-uJz"/>
+                                    <constraint firstItem="csj-mT-tP6" firstAttribute="centerX" secondItem="EfE-FI-3nI" secondAttribute="centerX" id="oFA-c6-JCn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EfE-FI-3nI" firstAttribute="centerX" secondItem="EOO-yp-VKW" secondAttribute="centerX" id="H9t-pD-FDZ"/>
+                            <constraint firstItem="EfE-FI-3nI" firstAttribute="top" secondItem="qH0-tG-5OA" secondAttribute="bottom" constant="156" id="cxK-1s-9s5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1516" y="761"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Ton-rD-yX2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="okl-lr-sOp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VhW-5y-hN6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSd-DQ-8hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="677"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="ADg-yK-2C2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Restaurants" id="6S1-9B-Rz7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OIg-8C-Y4y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvg-yD-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="814"/>
+        </scene>
+    </scenes>
+</document>

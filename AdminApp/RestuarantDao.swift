@@ -53,6 +53,16 @@ class RestuarantDao {
         }
     
     }
+    
+    func getRestaurantsList(completionHandler:@escaping(Array<Restaurant>)->Void){
+    
+        
+    
+    
+    }
+    
+    
+    
     func addRestuarantAdmin(restuarantId :String, adminEmail:String,adminPassword:String,completionHandler:@escaping (Bool)->Void){
         
         
