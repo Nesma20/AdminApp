@@ -31,10 +31,13 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
 //        let  signOutBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(signOut(btn:)))
 //        let  addRestaurantBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(addRestaurantBtn(btn:)))
         let refreshBtn = UIBarButtonItem(title: "Refresh", style: UIBarButtonItemStyle.plain, target: self, action: #selector(refresh(sender:)))
+        
+        //let addRestaurant = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addRestaurantAction(_:)))
 //        
 //        self.navigationItem.rightBarButtonItem = signOutBtn
 //        self.navigationItem.rightBarButtonItem = addRestaurantBtn
-        self.navigationItem.leftBarButtonItem = refreshBtn
+//        self.navigationItem.leftBarButtonItem = refreshBtn
+        self.navigationItem.leftBarButtonItems?.append(refreshBtn)
         
         
 //adminDelegate.deleteTextFromLogIn()
@@ -42,7 +45,7 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
         
     }
     
-    @IBAction func addRestaurantAction(_ sender: UIBarButtonItem) {
+    func addRestaurantAction(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
         let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
         self.navigationController?.pushViewController(AddResturantVC, animated: true)

@@ -37,3 +37,10 @@ enum RestaurantQueriesURL : String {
     case latitude="latitude"
     case restaurant_image = "restaurant_image"
 }
+
+enum InquiriyQueriesURL :String {    
+    case inquiry_list = "/list"
+    case change_status = "/change_status"
+    case inquiry_id = "id"
+}
+

@@ -273,6 +273,8 @@
 				E28DB98522D26E4600475823 /* AdminSummary.storyboard */,
 				E21338B722D3A9C4001BCA41 /* SummaryCollectionViewCell.swift */,
 				E21338B822D3A9C4001BCA41 /* SummaryCollectionViewCell.xib */,
+				C3A2B8E322CEE022000C0559 /* UserInquiryTableViewCell.swift */,
+				C3779C5D22D2825900EA6F09 /* Dashboard.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -286,8 +288,10 @@
 				C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */,
 				C3193F9A22BF84DA00168F58 /* AddRestuarantAdminViewController.swift */,
 				83CF238122BFAB2900D568E5 /* mapViewController.swift */,
-				83CF238322BFD9D900D568E5 /* DemoVC.swift */,
 				E28DB98322D26E1300475823 /* AdminSummaryViewController.swift */,
+				C3A2B8DF22CED13C000C0559 /* UpdateRestaurantViewController.swift */,
+				C3A2B8E122CED75B000C0559 /* InquiriesTableViewController.swift */,
+				C3779C5B22D1934700EA6F09 /* InquiryDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 				C3193F9422BEF73C00168F58 /* Restuarant.swift */,
 				C3193F9622BEF78400168F58 /* RestuarantAdmin.swift */,
 				E28DB98722D2727E00475823 /* Summary.swift */,
+				C3819BFA22CFFE8600697411 /* Inquiry.swift */,
 			);
 			name = "Data Layer";
 			sourceTree = "<group>";
@@ -444,8 +449,9 @@
 				C37F80CD22A1269900BAFE40 /* Assets.xcassets in Resources */,
 				C37F80CB22A1269900BAFE40 /* Main.storyboard in Resources */,
 				E28DB98622D26E4600475823 /* AdminSummary.storyboard in Resources */,
-				83CF238822C000D000D568E5 /* TrySomething.storyboard in Resources */,
+				83CF238822C000D000D568E5 /* Restaurants.storyboard in Resources */,
 				E21338BA22D3A9C4001BCA41 /* SummaryCollectionViewCell.xib in Resources */,
+				83CF238822C000D000D568E5 /* Restaurants.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

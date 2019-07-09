@@ -16,7 +16,7 @@ var adminDao = AdminDao()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        /*
+        
         if adminDao.checkdataInUserDefault(){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -27,7 +27,7 @@ var adminDao = AdminDao()
             
         
         }
-        */
+        
         return true
     }
 
