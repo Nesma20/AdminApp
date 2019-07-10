@@ -20,12 +20,10 @@ var adminDao = AdminDao()
         if adminDao.checkdataInUserDefault(){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "displayUserNavigation")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainUserTabBar")
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
-            
-        
         }
         
         return true

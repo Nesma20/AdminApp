@@ -14,10 +14,7 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
     var users : Array<User> = []
     var userDao = UserDao()
     var adminDao = AdminDao()
-    
-    
-    
-  
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,20 +48,6 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
         self.navigationController?.pushViewController(AddResturantVC, animated: true)
     }
     
-    @IBAction func signOutAction(_ sender: UIBarButtonItem) {
-        // delete from User Default
-        adminDao.clearDataFromUserDefault()
-        
-        // redirct to login page
-        let window = UIApplication.shared.keyWindow
-        let storyboard
-            = UIStoryboard(name: "Main", bundle: nil)
-        let LoginVC = storyboard.instantiateViewController(withIdentifier: "loginVCNavigation")
-        window?.rootViewController  = LoginVC
-        UIView.transition(with: window!, duration: 0.5, options: .curveEaseInOut, animations: nil, completion: nil)
-
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
          updateUsersList()
        
