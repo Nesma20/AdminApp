@@ -17,7 +17,6 @@ class InquiryDetailsViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
-    
     @IBOutlet weak var userEmailLabel: UILabel!
 
     @IBOutlet weak var inquiryMessageTextView: UITextView!
@@ -35,12 +34,10 @@ class InquiryDetailsViewController: UIViewController {
         usernameLabel.text = user.userName!
         userEmailLabel.text = user.email!
         inquiryMessageTextView.text = inquiry.message!
+        
         displayImage(imageURL: inquiry.user.profileImage!, image: userProfileViewImage, typeOfImage: ImageTransformation.profile_r250.rawValue)
         
-        displayImage(imageURL: inquiry.image!, image: userProfileViewImage, typeOfImage: ImageTransformation.width150.rawValue)
-        
-        
-        
+        displayImage(imageURL: inquiry.image!, image: inquiryImageView, typeOfImage: ImageTransformation.width500.rawValue)
     }
     
     func displayImage(imageURL:String,image:UIImageView,typeOfImage :String ){
