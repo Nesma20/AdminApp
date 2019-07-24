@@ -24,8 +24,6 @@ var adminDao = AdminDao()
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
-            
-        
         }
         
         return true

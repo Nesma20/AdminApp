@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oN0-cR-PIO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w20-3N-yod" userLabel="Container">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="829"/>
@@ -157,7 +157,7 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39p-ZD-fRa">
-                                <rect key="frame" x="-19" y="580" width="38" height="18"/>
+                                <rect key="frame" x="-19" y="624" width="38" height="18"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,6 +182,20 @@
                             <constraint firstItem="8wa-ex-r4F" firstAttribute="top" secondItem="oN0-cR-PIO" secondAttribute="bottom" id="xSJ-R5-pBR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bCC-B0-gw4">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="ZJJ-Od-bz5">
+                            <color key="tintColor" red="0.90588235855102539" green="0.29803922772407532" blue="0.23529411852359772" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logoutUser:" destination="gkn-Sn-B1P" id="dui-Zj-yK6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2uS-1b-bTG">
+                            <color key="tintColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="UjU-iA-sSh" kind="show" id="foX-2J-VI8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
@@ -194,7 +208,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltl-u5-H1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="106"/>
+            <point key="canvasLocation" x="1060" y="105.24737631184409"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="Z2N-Ep-2eZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Restaurants" id="UjU-iA-sSh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wns-5y-KhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="-312"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y67-h5-Med">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xw2-Gk-syW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QPd-iY-tRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gkn-Sn-B1P" kind="relationship" relationship="rootViewController" id="hw7-wi-u1S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tn-hm-U2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="105.69715142428787"/>
         </scene>
     </scenes>
 </document>
