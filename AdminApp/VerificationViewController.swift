@@ -23,6 +23,7 @@ class VerificationViewController: UIViewController {
     
     @IBOutlet weak var backImageView: UIImageView!
     
+    @IBOutlet weak var phoneNumLabel: UILabel!
     @IBOutlet weak var verifyUserBtn: UIButton!
     
     @IBOutlet weak var blockUserBtn: UIButton!
@@ -42,10 +43,8 @@ class VerificationViewController: UIViewController {
             backImageView.sd_setShowActivityIndicatorView(true)
             backImageView.sd_setIndicatorStyle(.gray)
             backImageView.sd_setImage(with: URL(string: ImageAPI.getImage(type: .width500, publicId: backimage)), completed: nil)
-            verifyUserBtn.layer.cornerRadius = verifyUserBtn.frame.height / 2
-            verifyUserBtn.layer.masksToBounds = true
-            blockUserBtn.layer.cornerRadius = blockUserBtn.frame.height / 2
-            blockUserBtn.layer.masksToBounds = true
+            phoneNumLabel.text = userData.mobileNumber!
+           
             
             
         }

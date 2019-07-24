@@ -55,10 +55,10 @@ var inquiryDao = InquiryDao()
     }
     func updateInquiryList(){
     
-        
+        SVProgressHUD.show()
         inquiryDao.getAllInquiries(completionHandler: {(jsonList) in
             
-            
+            SVProgressHUD.dismiss()
         
         if jsonList.count == 0 {
             SVProgressHUD.showInfo(withStatus: "There are no inquiries to be displayed")

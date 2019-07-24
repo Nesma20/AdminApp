@@ -106,11 +106,8 @@ class ViewController: UIViewController ,AdminDelegate{
             SVProgressHUD.dismiss()
             
             if userFound {
-                let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-                let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabView")
-                appDelegate.window?.rootViewController = initialViewController
-                appDelegate.window?.makeKeyAndVisible()
-                
+              
+                self.performSegue(withIdentifier: "showMainTabBar", sender: self)
                 
             } else {
                 

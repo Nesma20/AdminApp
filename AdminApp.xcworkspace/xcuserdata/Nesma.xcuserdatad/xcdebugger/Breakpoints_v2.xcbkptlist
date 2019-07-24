@@ -441,7 +441,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "signOut(btn:)"
+            landmarkName = "refresh(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
