@@ -78,7 +78,7 @@ var inquiryDao = InquiryDao()
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var inquiryDetaildVC = self.storyboard?.instantiateViewController(withIdentifier: "inquiryDetailsVC") as! InquiryDetailsViewController
+        let inquiryDetaildVC = self.storyboard?.instantiateViewController(withIdentifier: "inquiryDetailsVC") as! InquiryDetailsViewController
         inquiryDetaildVC.inquiry = inquiryList[indexPath.row]
         inquiryDetaildVC.inquiry.user = inquiryList[indexPath.row].user
         self.navigationController?.pushViewController(inquiryDetaildVC, animated: true)

@@ -106,11 +106,10 @@ class ViewController: UIViewController ,AdminDelegate{
             SVProgressHUD.dismiss()
             
             if userFound {
-                
-                let displayingUsers = self.storyboard?.instantiateViewController(withIdentifier: "displayUserVC") as! DisplayUsersForVerifiedViewController
-                displayingUsers.adminDelegate = self
-                
-                self.navigationController?.pushViewController(displayingUsers, animated: true)
+                let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabView")
+                appDelegate.window?.rootViewController = initialViewController
+                appDelegate.window?.makeKeyAndVisible()
                 
                 
             } else {

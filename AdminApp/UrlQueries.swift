@@ -15,6 +15,8 @@ enum AdminURLQueryURL : String {
     case resturant_admin = "/add_restaurant_admin"
     case restauran_id="restaurant_id"
     case summary = "/summary"
+    case update_restaurant_admin = "/update_restaurant_admin"
+    case admin_id = "admin_id"
     
     func url() -> URL {
         return URL(string: AdminAPI.baseAdminUrlString + self.rawValue)!
@@ -36,6 +38,13 @@ enum RestaurantQueriesURL : String {
     case longitude="longitude"
     case latitude="latitude"
     case restaurant_image = "restaurant_image"
+    case delete_restaurant = "/delete_restaurant"
+    case update_restaurant = "/update_restaurant"
+    case restaurant_id = "restuarant_id"
+    case list_without_location = "/list_without_location"
+    case page = "page"
+    
+    
 }
 
 enum InquiriyQueriesURL :String {    

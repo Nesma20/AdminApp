@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AdminApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,16 +52,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>080FE69C09656895D8C72F0A4E465E0D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>08E23E27D618B22E2D636426803014B0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3383968E74B5371B20BB519B170DC7FD</key>
 		<dict>
 			<key>primary</key>
@@ -67,12 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B6B4650843684B77B8829D9C52C70EF</key>
+		<key>3EF0577DABDE66A357AFD39769D75035</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7637D3F605788597212C2C3A03AFE1E</key>
+		<key>52991BF0DE24B2CA399BB7B30C993D30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E0526AFF0148C862C0138D33DAC1DBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65A96D4C0B45C6949552108EE681E5B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8B6B4650843684B77B8829D9C52C70EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF98DAAEFD6230370F00C9B710754729</key>
+		<key>E238B1C1A6CCC0226AB31021FBF127FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

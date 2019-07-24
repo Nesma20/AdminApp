@@ -37,7 +37,7 @@ class InquiryDetailsViewController: UIViewController {
         inquiryMessageTextView.text = inquiry.message!
         displayImage(imageURL: inquiry.user.profileImage!, image: userProfileViewImage, typeOfImage: ImageTransformation.profile_r250.rawValue)
         
-        displayImage(imageURL: inquiry.image!, image: userProfileViewImage, typeOfImage: ImageTransformation.width150.rawValue)
+        displayImage(imageURL: inquiry.image!, image: inquiryImageView, typeOfImage: ImageTransformation.width150.rawValue)
         
         
         

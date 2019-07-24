@@ -13,5 +13,6 @@ class Admin: NSObject {
     var userName:String?
     var email : String?
     var password:String?
+    var adminId : Int?
     
 }

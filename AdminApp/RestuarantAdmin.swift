@@ -10,7 +10,7 @@ import Foundation
 class ResturantAdmin{
     var restuarantAdminEmail:String?
     var restuarantAdminPassword:String?
-    var restuarantId :String?
+    var restuarantId :Int?
 
 
 }
