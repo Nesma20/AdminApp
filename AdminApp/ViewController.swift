@@ -33,6 +33,8 @@ class ViewController: UIViewController ,AdminDelegate{
         loginBtn.layer.cornerRadius = loginBtn.frame.height / 2
         loginBtn.layer.masksToBounds = true
         
+        // Bind to keyboard
+        self.view.bindToKeyboard(withTapGesture: true)
     }
     
     @IBAction func emailEditingChangeAction(_ sender: UITextField) {
