@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class Restaurant{
+import MapKit
+class Restaurant : NSObject{
     
     var restaurantID:Int?
     var restaurantName:String?
@@ -16,4 +17,8 @@ class Restaurant{
     var latitude:Double?
     var longitude:Double?
     var image:String?
+    var admin:ResturantAdmin?
+   
+    
+    
 }

@@ -37,7 +37,10 @@ class InquiryDetailsViewController: UIViewController {
         
         displayImage(imageURL: inquiry.user.profileImage!, image: userProfileViewImage, typeOfImage: ImageTransformation.profile_r250.rawValue)
         
-        displayImage(imageURL: inquiry.image!, image: inquiryImageView, typeOfImage: ImageTransformation.width500.rawValue)
+        displayImage(imageURL: inquiry.image!, image: inquiryImageView, typeOfImage: ImageTransformation.width150.rawValue)
+        
+        
+        
     }
     
     func displayImage(imageURL:String,image:UIImageView,typeOfImage :String ){

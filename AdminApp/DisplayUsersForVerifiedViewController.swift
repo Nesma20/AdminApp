@@ -25,7 +25,7 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
         
          self.navigationItem.hidesBackButton = true
         
-//        let  signOutBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(signOut(btn:)))
+    //   let  signOutBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(signOut(btn:)))
 //        let  addRestaurantBtn = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.plain, target: self, action: #selector(addRestaurantBtn(btn:)))
         let refreshBtn = UIBarButtonItem(title: "Refresh", style: UIBarButtonItemStyle.plain, target: self, action: #selector(refresh(sender:)))
         
@@ -41,26 +41,41 @@ class DisplayUsersForVerifiedViewController: UITableViewController, UsersListDel
         
         
     }
-    
-    func addRestaurantAction(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
-        let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
-        self.navigationController?.pushViewController(AddResturantVC, animated: true)
-    }
-    
+//    
+//    func addRestaurantAction(_ sender: UIBarButtonItem) {
+//        let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
+//        let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
+//        self.navigationController?.pushViewController(AddResturantVC, animated: true)
+//    }
+//    
+//    @IBAction func signOutAction(_ sender: UIBarButtonItem) {
+//        // delete from User Default
+//        adminDao.clearDataFromUserDefault()
+//        
+//        // redirct to login page
+//        let window = UIApplication.shared.keyWindow
+//        let storyboard
+//            = UIStoryboard(name: "Main", bundle: nil)
+//        let LoginVC = storyboard.instantiateViewController(withIdentifier: "loginVCNavigation")
+//        window?.rootViewController  = LoginVC
+//        UIView.transition(with: window!, duration: 0.5, options: .curveEaseInOut, animations: nil, completion: nil)
+//
+//        
+//    }
+//    
     override func viewWillAppear(_ animated: Bool) {
          updateUsersList()
        
     }
     
-    func addRestaurantBtn(btn:UIBarButtonItem){
-     let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
-       let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
-        self.navigationController?.pushViewController(AddResturantVC, animated: true)
-        
-        
-    
-    }
+//    func addRestaurantBtn(btn:UIBarButtonItem){
+//     let storyboard = UIStoryboard(name: "Restaurants", bundle: nil)
+//       let AddResturantVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! AddRestuarantViewController
+//        self.navigationController?.pushViewController(AddResturantVC, animated: true)
+//        
+//        
+//    
+//    }
     
     func  signOut(btn: UIBarButtonItem) {
     

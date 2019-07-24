@@ -192,7 +192,7 @@ class AddRestuarantViewController: UIViewController, CLLocationManagerDelegate {
 
 
 //MARK: - Select image from gallery
-extension AddRestuarantViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddRestuarantViewController {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
