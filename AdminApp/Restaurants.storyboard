@@ -542,12 +542,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYh-g0-sI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273.5999999999999" y="1259.3703148425789"/>
+            <point key="canvasLocation" x="948" y="1215"/>
         </scene>
         <!--Restaruants List View Controller-->
         <scene sceneID="qco-ja-msU">
             <objects>
-                <tableViewController id="eJL-jM-hMw" customClass="RestaruantsListViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RestaurantListVC" id="eJL-jM-hMw" customClass="RestaruantsListViewController" customModule="AdminApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="199" sectionHeaderHeight="28" sectionFooterHeight="28" id="eL3-QZ-Ds2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -676,7 +676,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <connections>
-                                                                            <action selector="restaurantNameTxtFiled:" destination="u62-Gu-gwP" eventType="editingChanged" id="P3p-FT-oMS"/>
+                                                                            <action selector="restaurantNameTxtFiledEditChanged:" destination="u62-Gu-gwP" eventType="editingChanged" id="N8S-C6-3v9"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>

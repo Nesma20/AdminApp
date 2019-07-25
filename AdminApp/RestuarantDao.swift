@@ -33,7 +33,7 @@ class RestuarantDao {
     
     print(myJsonData)
     
-    guard let code = myJsonData["code"].int else {
+    guard myJsonData["code"].int != nil else {
         return
     }
     

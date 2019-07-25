@@ -64,14 +64,47 @@ class InquiryDao{
                 
             }
         }
-        func changeStatusToRead(inqueryId:Int,completionHandler:(Bool)->Void){
         
+    
+    
+    }
+    
+    func changeStatusToRead(inqueryId:Int,completionHandler:@escaping(Bool)->Void){
+        var urlComponents = URLComponents(string: AdminAPI.baseInquiryUrlString + InquiriyQueriesURL.update_status.rawValue)
+       
+        urlComponents?.queryItems = [URLQueryItem(name: InquiriyQueriesURL.id.rawValue , value:String(inqueryId)),
+                                     URLQueryItem(name: InquiriyQueriesURL.is_read.rawValue , value:String(1))]
         
-        
-        
+        print( urlComponents?.string ?? "url........")
+        Alamofire.request((urlComponents?.url)!).validate().responseJSON {
+                            response in
+                            switch response.result {
+                                
+                            case .success(let result):
+                                let jsonData = JSON(result)
+                                print(jsonData)
+                                let status = jsonData["status"].intValue
+                                if status == 1 {
+                                    completionHandler(true)
+                                }
+                                else
+                                {
+                                    completionHandler(false)
+                                }
+                                
+                                
+                            case .failure(let error):
+                                print(error)
+                                completionHandler(false)
+                                
+                            }
+                            
         }
-    
-    
+        
+        
+        
+        
+        
     }
 
 

@@ -49,7 +49,8 @@ enum RestaurantQueriesURL : String {
 
 enum InquiriyQueriesURL :String {    
     case inquiry_list = "/list"
-    case change_status = "/change_status"
-    case inquiry_id = "id"
+    case update_status = "/update/status"
+    case id = "id"
+    case is_read = "is_read"
 }
 

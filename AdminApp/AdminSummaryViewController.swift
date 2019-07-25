@@ -142,7 +142,7 @@ class AdminSummaryViewController: UIViewController {
         let window = UIApplication.shared.keyWindow
         let storyboard
             = UIStoryboard(name: "Main", bundle: nil)
-        let LoginVC = storyboard.instantiateViewController(withIdentifier: "loginVCNavigation")
+        let LoginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         window?.rootViewController  = LoginVC
         UIView.transition(with: window!, duration: 0.5, options: .curveEaseInOut, animations: nil, completion: nil)
         

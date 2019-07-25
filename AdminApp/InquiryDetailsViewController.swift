@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import SDWebImage
+import SVProgressHUD
 
 class InquiryDetailsViewController: UIViewController {
     
     var inquiry = Inquiry()
-    
+    var inquiriesDelegate :InquiriesDelegate?
     @IBOutlet weak var userProfileViewImage: UIImageView!
     
     @IBOutlet weak var usernameLabel: UILabel!
@@ -22,15 +23,16 @@ class InquiryDetailsViewController: UIViewController {
     @IBOutlet weak var inquiryMessageTextView: UITextView!
     
     @IBOutlet weak var inquiryImageView: UIImageView!
-    
+    var inquiryDao = InquiryDao()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        var user = inquiry.user
+        let user = inquiry.user
         usernameLabel.text = user.userName!
         userEmailLabel.text = user.email!
         inquiryMessageTextView.text = inquiry.message!
@@ -39,9 +41,33 @@ class InquiryDetailsViewController: UIViewController {
         
         displayImage(imageURL: inquiry.image!, image: inquiryImageView, typeOfImage: ImageTransformation.width150.rawValue)
         
+        inquiryDao.changeStatusToRead(inqueryId: inquiry.inquiryId!, completionHandler: {
+            isRead in
+            if isRead{
+                
+                SVProgressHUD.showSuccess(withStatus: "Mark As Read")
+            }
+            else{
+             SVProgressHUD.showError(withStatus: "ErrorWhile Reading ")
+            }
+            
+        })
         
+//        self.navigationItem.hidesBackButton = true
+//        
+//          let  BackBtn = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToList(btn:)))
+//        
+//         self.navigationItem.leftBarButtonItems?.append(BackBtn)
         
     }
+    func  backToList(btn: UIBarButtonItem) {
+       
+       let inquiriesListVC = self.storyboard?.instantiateViewController(withIdentifier: "inquiriesListVC") as! InquiriesTableViewController
+        self.inquiriesDelegate?.getInquiriesList()
+          self.navigationController?.pushViewController(inquiriesListVC, animated: true)
+        
+    }
+
     
     func displayImage(imageURL:String,image:UIImageView,typeOfImage :String ){
             image.sd_setShowActivityIndicatorView(true)
