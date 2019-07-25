@@ -14,6 +14,7 @@ class AddRestuarantAdminViewController: UIViewController {
     var restaurantId :Int!
     var restaurantDao = RestuarantDao()
     var adminData = ResturantAdmin()
+    var restDelegate:RestaurantListDelegate?
     var flag :Int!
     @IBOutlet weak var restuarantImageView: UIImageView!
     
@@ -142,9 +143,9 @@ class AddRestuarantAdminViewController: UIViewController {
     
     func moveToRestaurantList(){
         
-//        let restaurantsListVC = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantsNavVC")
-        
-        self.navigationController?.popToRootViewController(animated: true)
+       let restaurantsListVC = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantListVC")
+        self.restDelegate?.updateRestaurantList()
+        self.navigationController?.pushViewController(restaurantsListVC!, animated: true)
     
     }
     

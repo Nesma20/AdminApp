@@ -8,19 +8,24 @@
 
 import UIKit
 import SVProgressHUD
-class RestaruantsListViewController: UITableViewController {
+class RestaruantsListViewController: UITableViewController, RestaurantListDelegate {
 
     var restaurantsData : Array<Restaurant> = []
     var restaurantDao = RestuarantDao()
     var restaurantSelected = Restaurant()
+    var page :Int = 1
+    var isAllDataDisplayed :Bool = false;
     override func viewDidLoad() {
         super.viewDidLoad()
-getRestaurantData(pageNum: 1)
+      
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getRestaurantData(pageNum: page)
     }
 
    
@@ -46,6 +51,14 @@ getRestaurantData(pageNum: 1)
             cell.restaurantImageView.sd_setShowActivityIndicatorView(true)
             cell.restaurantImageView.sd_setIndicatorStyle(.gray)
             cell.restaurantImageView.sd_setImage(with: URL(string: ImageAPI.getImage(type: .width150, publicId: image)), completed: nil)
+        }
+        if restaurantsData.count-1 == indexPath.row && !isAllDataDisplayed{
+        
+            page = page + 1
+            getRestaurantData(pageNum: page)
+            
+        
+        
         }
        
 
@@ -87,21 +100,43 @@ getRestaurantData(pageNum: 1)
         }    
     }
     func getRestaurantData(pageNum:Int){
-        
+        var restList:Array<Restaurant> = []
         restaurantDao.getRestaurantsList(pageNumber: pageNum, completionHandler: {(jsonList) in
             
             
             
-            if jsonList.count == 0 {
-                SVProgressHUD.showInfo(withStatus: "There are no inquiries to be displayed")
-                
-                
-            }
-            self.restaurantsData = jsonList
-            self.tableView.reloadData()
+            if pageNum==1
             
-        })
+            {
+                if jsonList.count == 0 {
+                    SVProgressHUD.showInfo(withStatus: "There are no inquiries to be displayed")
+                    self.isAllDataDisplayed = true
+                    
+                }
+                else{
+                self.restaurantsData = jsonList
+                
+                }
+                
+            
+            }
+            else if pageNum > 1
+            {
+                if jsonList.count != 0 {
+                    restList = jsonList
+                    self.restaurantsData.append(contentsOf: restList)
+                    self.isAllDataDisplayed = false
+                }
+                else{
+                self.isAllDataDisplayed = true
+                }
+            }
+                
+            self.tableView.reloadData()
 
+          
+          
+        })
         
     }
 
@@ -120,6 +155,7 @@ getRestaurantData(pageNum: 1)
            
             
         }
+        
         if segue.identifier == "AddNewRestaurant" {
             
             print ("segue for add button")
@@ -130,6 +166,12 @@ getRestaurantData(pageNum: 1)
        
     }
    
-   
+    func updateRestaurantList(){
+        if !isAllDataDisplayed{
+     getRestaurantData(pageNum: page)
+        }
+    
+    }
+    
 
 }

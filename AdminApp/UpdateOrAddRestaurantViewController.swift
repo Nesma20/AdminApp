@@ -36,6 +36,7 @@ class UpdateOrAddRestaurantViewController: UIViewController , CLLocationManagerD
     @IBOutlet weak var longitudeErrorLabel: UILabel!
     @IBOutlet weak var latitudeErrorLabel: UILabel!
     
+    
     let locationManager = CLLocationManager()
     var lat:Double?
     var longt:Double?
@@ -43,7 +44,7 @@ class UpdateOrAddRestaurantViewController: UIViewController , CLLocationManagerD
     var flag :Int?
     var restaurantData = Restaurant()
     var restaurantDao = RestuarantDao()
-   
+    var restaurantsDelegate : RestaurantListDelegate?
     
     
     override func viewDidLoad() {
@@ -130,6 +131,7 @@ print("\(flag!)")
             myPickerController.allowsEditing = false
             
             present(myPickerController, animated: true, completion: nil)
+            
         }
 
     }
@@ -166,16 +168,19 @@ print("\(flag!)")
             return
         }
         
-        if flag! == 1{
         
-        }
-        else if flag! == 2 {
+        if flag! == 2 {
          updateRestaurant()
         }
+        else if flag! == 1 {
+        
+        addNewResaurant(resturantName: resturantName,city: city,country: country,longitude: longitude,latitude: latitude)
+        }
+        
         
     }
     func enableaddOrUpdateButton(){
-        if isValidName! && isValidCity! && isValidCountry! {
+        if isValidName! && isValidCity! && isValidCountry! && isImageUploaded!{
             addOrUpdateRestuarantBtn.isEnabled = true;
             
         }
@@ -218,11 +223,17 @@ print("\(flag!)")
             restaurantAdminVC.flag = 2
         restaurantAdminVC.adminData = restaurantData.admin!
         }
+        if flag! == 1 {
+        restaurantAdminVC.flag = 1
+        }
         self.navigationController?.pushViewController(restaurantAdminVC, animated: true)
         
         
     }
-    
+    func returnBackToRestaurantList(){
+    self.navigationController?.popToRootViewController(animated: true)
+        
+    }
     func updateUIToUpdate(){
         
         restaurantNameTxtField.text = restaurantData.restaurantName!
@@ -234,6 +245,7 @@ print("\(flag!)")
         restaurantImageView.sd_setShowActivityIndicatorView(true)
                restaurantImageView.sd_setIndicatorStyle(.gray)
                 restaurantImageView.sd_setImage(with: URL(string: ImageAPI.getImage(type: .original, publicId: restaurantData.image!)), completed: nil)
+        isImageUploaded = true
 
         addOrUpdateRestuarantBtn.setTitle("Update", for: .normal)
         addOrUpdatePhoto.setTitle("update photo",for: .normal)
@@ -273,7 +285,7 @@ print("\(flag!)")
             
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
-            
+            self.returnBackToRestaurantList()
             
             
             
@@ -301,6 +313,7 @@ extension UpdateOrAddRestaurantViewController: UIImagePickerControllerDelegate, 
             uploadImage(imageData)
             
             restaurantImageView.image = image
+            isImageUploaded = true
         }
         
         self.dismiss(animated: true, completion: nil)
@@ -321,6 +334,7 @@ extension UpdateOrAddRestaurantViewController {
             
             if let _ = result.0, let publicId = result.1 {
                 self.restaurantData.image = publicId
+                
             }
         })
     }
@@ -329,7 +343,7 @@ extension UpdateOrAddRestaurantViewController {
     func uploadStarts() {
         imageActivityIndicator.startAnimating()
         SVProgressHUD.showInfo(withStatus: "Image Was Uploading")
-        
+       
         restaurantImageView.alpha = 0.3
     }
     

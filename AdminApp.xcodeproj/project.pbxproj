@@ -17,6 +17,7 @@
 		C336AC5C22BA947B00478403 /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC5B22BA947B00478403 /* ImageAPI.swift */; };
 		C336AC5E22BAA6BF00478403 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */; };
 		C336AC6222BADA1C00478403 /* imgeIDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */; };
+		C349D46C22E95E2D005886FC /* InquiriesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349D46B22E95E2D005886FC /* InquiriesDelegate.swift */; };
 		C35E380E22A36E7A0069DFAF /* AdminDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E380D22A36E7A0069DFAF /* AdminDao.swift */; };
 		C35E381022A36FB50069DFAF /* AdminAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E380F22A36FB50069DFAF /* AdminAPI.swift */; };
 		C35E381222A375EA0069DFAF /* AdminDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35E381122A375EA0069DFAF /* AdminDelegate.swift */; };
@@ -96,6 +97,7 @@
 		C336AC5B22BA947B00478403 /* ImageAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
 		C336AC5D22BAA6BF00478403 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		C336AC6122BADA1C00478403 /* imgeIDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imgeIDCollectionViewCell.swift; sourceTree = "<group>"; };
+		C349D46B22E95E2D005886FC /* InquiriesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InquiriesDelegate.swift; sourceTree = "<group>"; };
 		C35E380D22A36E7A0069DFAF /* AdminDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminDao.swift; sourceTree = "<group>"; };
 		C35E380F22A36FB50069DFAF /* AdminAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAPI.swift; sourceTree = "<group>"; };
 		C35E381122A375EA0069DFAF /* AdminDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				C36F131722BBD419009773FB /* UsersListDelegate.swift */,
 				C367400222D6C75600566BC3 /* RestaurantListDelegate.swift */,
 				C367400422D6C83000566BC3 /* UpdateRestaurantDelegate.swift */,
+				C349D46B22E95E2D005886FC /* InquiriesDelegate.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				C37F80C822A1269900BAFE40 /* ViewController.swift in Sources */,
 				C38183D822B93EE8001AA4FD /* DisplayUsersTableViewCell.swift in Sources */,
 				C39254DE22C0EA7B00EF9A91 /* RoundedButton.swift in Sources */,
+				C349D46C22E95E2D005886FC /* InquiriesDelegate.swift in Sources */,
 				C37F80FB22A15BA700BAFE40 /* Admin.swift in Sources */,
 				E24A8EF222D3699500AA017B /* LineChartView.swift in Sources */,
 				E28DB98822D2727E00475823 /* Summary.swift in Sources */,

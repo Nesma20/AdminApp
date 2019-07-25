@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 import SDWebImage
-class InquiriesTableViewController : UITableViewController {
+class InquiriesTableViewController : UITableViewController,InquiriesDelegate {
 var inquiryDao = InquiryDao()
     var inquiryList = Array<Inquiry>()
     override func viewDidLoad() {
@@ -77,10 +77,13 @@ var inquiryDao = InquiryDao()
         return 150
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+       
         let inquiryDetaildVC = self.storyboard?.instantiateViewController(withIdentifier: "inquiryDetailsVC") as! InquiryDetailsViewController
+        
         inquiryDetaildVC.inquiry = inquiryList[indexPath.row]
         inquiryDetaildVC.inquiry.user = inquiryList[indexPath.row].user
+        inquiryList.remove(at: indexPath.row)
+        self.tableView.reloadData()
         self.navigationController?.pushViewController(inquiryDetaildVC, animated: true)
         
     }
@@ -96,5 +99,10 @@ var inquiryDao = InquiryDao()
         // Pass the selected object to the new view controller.
     }
     */
+    func getInquiriesList(){
+    updateInquiryList()
+    
+    }
+    
 
 }
