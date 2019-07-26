@@ -85,7 +85,7 @@ class RestaruantsListViewController: UITableViewController, RestaurantListDelega
                 SVProgressHUD.showSuccess(withStatus: "Restaurant is Deleted Successfully", maskType: .gradient)
                     self.restaurantsData.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .fade)
-                    self.getRestaurantData(pageNum: 1)
+                    self.getRestaurantData(pageNum: self.page)
                     
                 }
                 else
